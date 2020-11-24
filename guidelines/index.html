@@ -1,740 +1,747 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-    <head>
-        <meta charset="UTF-8" />
+<html xmlns="http://www.w3.org/1999/xhtml" lang="sk" xml:lang="sk">
+	<head>
+		<meta charset="UTF-8" />
 
-        <title>Pravidlá pre prístupnosť webového obsahu (WCAG) 2.1</title>
-    	<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
-    	<script src="../script/wcag.js" class="remove"></script>
-    	<script src="respec-config.js" class="remove"></script>
-    	<script src="../biblio.js" class="remove"></script>
-    	<link rel="stylesheet" type="text/css" href="../css/sources.css" class="remove" />
-        <link rel="stylesheet" type="text/css" href="guidelines.css" />
-    </head>
-    <body>
-        <section id="abstract">
-            <p>Pravidlá pre prístupnosť webového obsahu (WCAG) 2.1 pokrývajú širokú škálu odporúčaní na sprístupňovanie webového obsahu. Postupovanie podľa týchto pravidiel urobí obsah prístupnejší širšiemu okruhu ľudí so zdravotným postihnutím, zahŕňajúc prispôsobenia pre osoby, ktoré trpia slepotou a zhoršením zraku, hluchotou a poškodením sluchu, obmedzením pohybu, poruchou reči, fotosenzitivitou a kombináciou uvedeného, niektoré prispôsobenia pre postihnutia v oblasti schopnosti sa učiť a kognitívne obmedzenia; nevyrieši však všetky potreby používateľov s týmito zdravotnými postihnutiami. Tieto pravidlá sa venujú prístupnosti webového obsahu na stolných počítačoch, laptopoch, tabletoch a mobilných zariadeniach. Postupovanie podľa týchto pravidiel častokrát zvýši použiteľnosť webového obsahu pre používateľov vo všeobecnosti.</p>
-        	<p>Kritériá úspešnosti WCAG 2.1 sú zostavené ako testovateľné vyhlásenia, ktoré nie sú technologicky špecifické. Pravidlá ohľadom splnenia kritérií úspešnosti v konkrétnych technológiách, ako aj všeobecné informácie o výklade kritérií úspešnosti sú uvedené v osobitných dokumentoch. Pre nájdenie úvodu a odkazov na technické a vzdelávacie materiály pozri <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Súhrn k pravidlám pre prístupnosť webového obsahu (WCAG)</a>.</p>
-            <p>WCAG 2.1 rozširuje <a href="https://www.w3.org/TR/WCAG20/">Pravidlá pre prístupnosť webového obsahu 2.0</a> [[!WCAG20]], ktoré boli zverejnené v decembri 2008 ako odporúčanie W3C. Obsah, ktorý je v zhode s WCAG 2.1, je v zhode aj s WCAG 2.0. Zámerom PS je, aby WCAG 2.1 mohlo poskytovať alternatívny spôsob dodržania pre politiky, ktoré vyžadujú dodržiavanie WCAG 2.0. Vydanie WCAG 2.1 nezrušuje ani nenahrádza WCAG 2.0. Zatiaľ čo WCAG 2.0 ostáva naďalej odporúčaním W3C, W3C odporúča používať WCAG 2.1, a to s cieľom maximalizácie budúcej aplikovateľnosti snáh v oblasti prístupnosti. W3C zároveň podporuje pri vývoji alebo aktualizácií politík pre webovú prístupnosť používanie najnovšej verzie WCAG.</p>
-        </section>
-        <section id="sotd">
-        	<p>Toto je <a href="https://www.w3.org/2018/Process-20180201/#RecsPR">odporúčanie</a> WCAG 2.1<a href="https://www.w3.org/WAI/GL/"> pracovnej skupiny pre pravidlá prístupnosti</a>.</p> 
-        </section>
-        <section class="informative introductory" id="intro">
-			<h2>Introduction</h2>
+		<title>Pravidlá pre prístupnosť webového obsahu (WCAG) 2.1</title>
+
+		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
+		<script src="../script/wcag.js" class="remove"></script>
+		<script src="respec-config.js" class="remove"></script>
+		<script src="../biblio.js" class="remove"></script>
+		<link rel="stylesheet" type="text/css" href="../css/sources.css" class="remove" />
+		<link rel="stylesheet" type="text/css" href="guidelines.css" />
+	</head>
+	<body>
+		<section id="abstract">
+			<p>Pravidlá pre prístupnosť webového obsahu (WCAG) 2.1 pokrývajú širokú škálu odporúčaní na sprístupňovanie webového obsahu. Postupovanie podľa týchto pravidiel urobí obsah prístupnejší širšiemu okruhu ľudí so zdravotným postihnutím, zahŕňajúc prispôsobenia pre osoby, ktoré trpia slepotou a zhoršením zraku, hluchotou a poškodením sluchu, obmedzením pohybu, poruchou reči, fotosenzitivitou a kombináciou uvedeného, niektoré prispôsobenia pre postihnutia v oblasti schopnosti sa učiť a kognitívne obmedzenia; nevyrieši však všetky potreby používateľov s týmito zdravotnými postihnutiami. Tieto pravidlá sa venujú prístupnosti webového obsahu na stolných počítačoch, laptopoch, tabletoch a mobilných zariadeniach. Postupovanie podľa týchto pravidiel častokrát zvýši použiteľnosť webového obsahu pre používateľov vo všeobecnosti.</p>
+			<p>Kritériá úspešnosti WCAG 2.1 sú zostavené ako testovateľné vyhlásenia, ktoré nie sú technologicky špecifické. Pravidlá ohľadom splnenia kritérií úspešnosti v konkrétnych technológiách, ako aj všeobecné informácie o výklade kritérií úspešnosti sú uvedené v osobitných dokumentoch. Pre nájdenie úvodu a odkazov na technické a vzdelávacie materiály pozri <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Súhrn k pravidlám pre prístupnosť webového obsahu (WCAG)</a>.</p>
+			<p>WCAG 2.1 rozširuje <a href="https://www.w3.org/TR/WCAG20/">Pravidlá pre prístupnosť webového obsahu 2.0</a> [[!WCAG20]], ktoré boli zverejnené v decembri 2008 ako odporúčanie W3C. Obsah, ktorý je v súlade s WCAG 2.1, je v súlade aj s WCAG 2.0. Zámerom PS je, aby WCAG 2.1 mohlo poskytovať alternatívny spôsob dodržania pre politiky, ktoré vyžadujú dodržiavanie WCAG 2.0. Vydanie WCAG 2.1 nezrušuje ani nenahrádza WCAG 2.0. Zatiaľ čo WCAG 2.0 ostáva naďalej odporúčaním W3C, W3C odporúča používať WCAG 2.1, a to s cieľom maximalizácie budúcej aplikovateľnosti snáh v oblasti prístupnosti. W3C zároveň podporuje pri vývoji alebo aktualizácií politík pre webovú prístupnosť používanie najnovšej verzie WCAG.</p>
+		</section>
+		<section id="sotd">
+			<p><em>Táto časť opisuje stav tohto dokumentu v čase jeho publikovania. Tento dokument môže byť nahradený ďalšími dokumentmi. Zoznam aktuálnych publikácií W3C a najnovšiu verziu tejto technickej správy je možné nájsť v <a href="https://www.w3.org/TR/">indexe technických správ W3C</a>na adrese https://www.w3.org/TR/.</em></p>
+			<p>Toto je <a href="https://www.w3.org/2018/Process-20180201/#RecsPR">odporúčanie</a> WCAG 2.1<a href="https://www.w3.org/WAI/GL/"> pracovnej skupiny pre pravidlá prístupnosti</a>.</p>
+			<p>Tento dokument bol revidovaný členmi W3C, vývojármi softvéru a inými skupinami W3C a zainteresovanými osobami a bol schválený riaditeľom ako odporúčanie W3C. Je to stabilný dokument a môže byť používaný ako referenčný materiál alebo pre citáciu z iného dokumentu. Rola W3C pri vytváraní tohto odporúčania je upútanie pozornosti na túto špecifikáciu a podporovanie jej širokého nasadenia. Toto zvyšuje funkcionalitu a interoperabilitu webu.</p>
+			<p>W3C od vydania tohto odporúčania očakáva, že funkcionalita špecifikovaná v tomto odporúčaní nebude ovplyvňovaná zmenami hodnôt CSS a modulu jednotiek úrovne 3 alebo kurzorových udalostí úrovne 2. Pracovná skupina bude pokračovať v sledovaní týchto špecifikácií.</p>
+			<p>Pre pripomienkovanie zadajte problém do W3C WCAG GitHub repozitára. Pracovná skupina vyžaduje, aby sa verejné pripomienky predkladali ako nové problémy spôsobom „jeden problém pre jednu diskrétnu pripomienku“. Účet GitHub na odoslanie problémov sa vytvára zadarmo. Ak nie je zadanie problémov v GitHub uskutočniteľné, pošlite e-mail na adresu <a href="mailto:public-agwg-comments@w3.org">public-agwg-comments@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-agwg-comments/">archív pripomienok</a>). Pripomienky prijaté k odporúčaniu WCAG 2.1 nemôžu mať za následok zmenu tejto verzie pravidiel, ale môžu byť predmetom budúcich opráv alebo verzií WCAG. Pracovná skupina neplánuje vytvárať k pripomienkam formálne odpovede. Zoznam zadaných problémov, ako aj archívy diskusií mailing listov PS PP sú verejné dostupné a budúca práca pracovnej skupiny sa môže venovať pripomienkam prijatým k tomuto dokumentu.</p> 
+			<p>Tento dokument bol <a href="https://www.w3.org/WAI/GL/">pracovnou skupinou pre pravidlá prístupnosti</a> vydaný ako odporúčanie.</p>
+			<p>Prečítajte si <a href="https://www.w3.org/WAI/WCAG21/implementation-report/">implementačnú správu</a> pracovnej skupiny.</p>
+			<p>Tento dokument bol revidovaný členmi W3C, vývojármi softvéru a inými skupinami W3C a zainteresovanými osobami a bol schválený riaditeľom ako odporúčanie W3C. Je to stabilný dokument a môže byť používaný ako referenčný materiál alebo pre citáciu z iného dokumentu. Úlohou W3C pri vytváraní tohto odporúčania je upútanie pozornosti na túto špecifikáciu a podporovanie jej širokého nasadenia. To zvyšuje funkcionalitu a interoperabilitu webu.</p>
+			<p>Tento dokument vytvorila skupina pôsobiaca podľa <a href="https://www.w3.org/Consortium/Patent-Policy/">patentových zásad W3C</a>. W3C udržiava <a href="https://www.w3.org/2004/01/pp-impl/35422/status">verejný zoznam všetkých zverejnených patentov</a>, ktorý bol zostavený v súvislosti s výsledkami skupiny - daná stránka obsahuje aj pravidlá pre zverejnenie patentu. Jednotlivec, ktorý má aktuálnu vedomosť o patente, o ktorom verí, že obsahuje <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">podstatný(-é) nárok(-y)</a>, musí túto informáciu zverejniť v súlade s <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">časťou 6 patentových zásad W3C</a>.</p>
+			<p>Tento dokument sa riadi <a href="https://www.w3.org/2018/Process-20180201/">procesným dokumentom W3C z 1. februára 2018</a>.</p>
+		</section>
+		<section class="informative introductory" id="intro">
+			<h2>Úvod</h2>
+			<p><em>Táto časť nie je normatívna.</em></p>
 			<section>
-				<h3>Background on WCAG 2</h3>
-				<p>Web Content Accessibility Guidelines (WCAG) 2.1 defines how to make Web content more accessible to people with disabilities. Accessibility involves a wide range of disabilities, including visual, auditory, physical, speech, cognitive, language, learning, and neurological disabilities. Although these guidelines cover a wide range of issues, they are not able to address the needs of people with all types, degrees, and combinations of disability. These guidelines also make Web content more usable by older individuals with changing abilities due to aging and often improve usability for users in general.</p>
-				<p>WCAG 2.1 is developed through the <a href="https://www.w3.org/WAI/standards-guidelines/w3c-process/">W3C process</a> in cooperation with individuals and organizations around the world, with a goal of providing a shared standard for Web content accessibility that meets the needs of individuals, organizations, and governments internationally. WCAG 2.1 builds on WCAG 2.0 [[!WCAG20]], which in turn built on WCAG 1.0 [[WAI-WEBCONTENT]] and is designed to apply broadly to different Web technologies now and in the future, and to be testable with a combination of automated testing and human evaluation. For an introduction to WCAG, see the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG) Overview</a>.</p>
-                
-				<p>Significant challenges were encountered in defining additional criteria to address cognitive, language, and learning disabilities, including a short timeline for development as well as challenges in reaching consensus on testability, implementability, and international considerations of proposals. Work will carry on in this area in future versions of WCAG. We encourage authors to refer to our supplemental guidance on <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#supplement">improving inclusion for people with disabilities, including learning and cognitive disabilities, people with low-vision, and more</a>.</p>
-
-				<p>Web accessibility depends not only on accessible content but also on accessible Web browsers and other user agents. Authoring tools also have an important role in Web accessibility. For an overview of how these components of Web development and interaction work together, see:</p>
+				<h3>Základné informácie o WCAG 2</h3>
+				<p>Pravidlá pre prístupnosť webového obsahu (WCAG) 2.1 definujú spôsob, ako zabezpečiť prístupnosť webového obsahu ľuďom so zdravotným postihnutím. Prístupnosť zahŕňa širokú škálu postihnutí vrátane zrakových, sluchových, fyzických, rečových, kognitívnych, jazykových, učebných a neurologických porúch. Aj keď tieto pravidlá pokrývajú širokú škálu problémov, nemôžu sa zaoberať potrebami ľudí všetkých typov, stupňov a kombinácií zdravotného postihnutia. Tieto pravidlá uľahčujú aj používanie webového obsahu staršími osobami s meniacimi sa schopnosťami v dôsledku starnutia a často zvyšujú použiteľnosť pre používateľov vo všeobecnosti.</p>
+				<p>WCAG 2.1 boli vyvinuté prostredníctvom <a href="https://www.w3.org/WAI/intro/w3c-process">procesu W3C</a> v spolupráci s jednotlivcami a organizáciami na celom svete, a to s cieľom poskytnúť spoločný štandard pre prístupnosť webového obsahu, ktorý spĺňa potreby jednotlivcov, organizácií a vlád na medzinárodnej úrovni. WCAG 2.1 vychádzajú z pravidiel WCAG 2.0 [[!WCAG20]], ktoré zase vychádzali z pravidiel WCAG 1.0 [[WAI-WEBCONTENT]], a sú navrhnuté tak, aby sa v súčasnosti i v budúcnosti široko uplatňovali na rôzne webové technológie, a aby boli testovateľné kombináciou automatizovaných testov a ľudských hodnotení. Informácie o úvode do pravidiel WCAG nájdete v <a href="http://www.w3.org/WAI/standards-guidelines/wcag/">Súhrne k pravidlám pre prístupnosť webového obsahu (WCAG)</a>.</p>
+				<p>Pri definovaní dodatočných kritérií na riešenie kognitívnych, jazykových a učebných zdravotných postihnutí, zahŕňajúc aj krátky časový plán pre rozvoj, ako aj výzvy pri dosahovaní konsenzu ohľadom testovateľnosti, realizovateľnosti a medzinárodných posudzovaní návrhov, sa vyskytli významné výzvy. Práca v tomto smere bude pokračovať v budúcich verziách WCAG. Odporúčame autorom, aby si prečítali naše dodatočné pokyny týkajúce sa <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#supplement">zlepšenia inklúzie osôb so zdravotným postihnutím, vrátane učebného a kognitívneho postihnutia, osôb so zhoršeným videním a ďalšími postihnutiami</a>.</p>
+				<p>Webová prístupnosť nezávisí len od prístupného obsahu, ale aj od prístupnosti webových prehliadačov a ďalších nástrojov používateľov. Dôležitú úlohu vo webovej prístupnosti majú tiež nástroje na tvorbu obsahu. Prehľad informácií o tom, ako jednotlivé komponenty pre vývoj webu a ich interakcia fungujú, môžete nájsť v nasledujúcich dokumentoch:</p>
 				<ul>
-					<li><strong><a href="https://www.w3.org/WAI/fundamentals/components/">Essential Components of Web Accessibility</a></strong></li>
-					<li><strong><a href="https://www.w3.org/WAI/standards-guidelines/uaag/">User Agent Accessibility Guidelines (UAAG) Overview</a></strong></li>
-					<li><strong><a href="https://www.w3.org/WAI/standards-guidelines/atag/">Authoring Tool Accessibility Guidelines (ATAG) Overview</a></strong></li>
-                </ul>
-                <p>Where this document refers to <q>WCAG 2</q> it is intended to mean any and all versions of WCAG that start with 2.</p>
+					<li><strong><a href="https://www.w3.org/WAI/fundamentals/components/">Základné súčasti webovej prístupnosti </a></strong></li>
+					<li><strong><a href="https://www.w3.org/WAI/standards-guidelines/uaag/">Súhrn k pravidlám prístupnosti nástrojov používateľa (UAAG)</a></strong></li>
+					<li><strong><a href="https://www.w3.org/WAI/standards-guidelines/atag/">Súhrn k pravidlám prístupnosti nástrojov na tvorbu obsahu (ATAG)</a></strong></li>
+				</ul>
 			</section>
 			<section>
-				<h3>WCAG 2 Layers of Guidance</h3>
-				<p>The individuals and organizations that use WCAG vary widely and include Web designers and developers, policy makers, purchasing agents, teachers, and students. In order to meet the varying needs of this audience, several layers of guidance are provided including overall <em>principles</em>, general <em>guidelines</em>, testable <em>success criteria</em> and a rich collection of <em>sufficient techniques</em>, <em>advisory techniques</em>, and <em>documented common failures</em> with examples, resource links and code.</p>
+				<h3>Delenie WCAG 2</h3>
+				<p>Jednotlivci a organizácie, ktorí využívajú WCAG, sa významne líšia a sú nimi ako dizajnéri a vývojári webov, tak tvorcovia politík, obchodníci, učitelia aj študenti.  Aby sa vyhovelo potrebám takejto rozmanitej skupiny subjektov, poskytuje sa niekoľko úrovní usmernení, zahŕňajúc súhrnné princípy, všeobecné <em>smernice</em>, merateľné <em>kritériá úspešnosti</em> a bohatú zbierku <em>postačujúcich a odporúčaných techník</em>, a <em>zdokumentovaných častých chýb</em> s príkladmi, odkazmi na zdroje a zdrojové kódy.</p>
 				<ul>
 					<li>
-						<p><strong>Principles</strong> - At the top are four principles that provide the foundation for Web accessibility: <em>perceivable, operable, understandable, and robust</em>. See also <a href="https://www.w3.org/WAI/WCAG21/Understanding/intro#understanding-the-four-principles-of-accessibility">Understanding the Four Principles of Accessibility</a>.</p>
+						<strong>Princípy</strong> - Úplne na vrchole stoja štyri princípy, ktoré predstavujú základné piliere prístupného webu: <em>vnímateľný, funkčný, zrozumiteľný a robustný</em>. Pozrite tiež <a href="https://www.w3.org/WAI/WCAG21/Understanding/intro#understanding-the-four-principles-of-accessibility">Ako chápať kritérium štyri princípy prístupnosti</a>.
 					</li>
 					<li>
-						<p><strong>Guidelines</strong> - Under the principles are guidelines. The 13 guidelines provide the basic goals that authors should work toward in order to make content more accessible to users with different disabilities. The guidelines are not testable, but provide the framework and overall objectives to help authors understand the success criteria and better implement the techniques.</p>
+						<strong>Pravidlá</strong> - Pod princípmi sa nachádzajú pravidlá. Trinásť pravidiel predstavuje základné ciele, na ktoré by sa mali tvorcovia zamerať, aby urobili svoj obsah prístupnejší osobám s rôznymi typmi postihnutia. Pravidlá samy o sebe nie sú testovateľné, ale sú rámcom a súhrnnými cieľmi, ktorý tvorcom pomáha porozumieť kritériám úspešnosti a lepšie uplatniť techniky prístupnosti.
 					</li>
 					<li>
-						<p><strong>Success Criteria</strong> - For each guideline, testable success criteria are provided to allow WCAG 2.2 to be used where requirements and conformance testing are necessary such as in design specification, purchasing, regulation, and contractual agreements. In order to meet the needs of different groups and different situations, three levels of conformance are defined: A (lowest), AA, and AAA (highest). Additional information on WCAG levels can be found in <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#levels">Understanding Levels of Conformance</a>.</p>
+						<strong>Kritériá úspešnosti</strong> - Pre každé pravidlo existujú testovateľné kritériá úspešnosti, ktoré umožňujú používanie WCAG 2.1 v situáciách, kde je nutné otestovať obsah z hľadiska miery jeho súladu s požiadavkami, ako napr. pri návrhoch dizajnu, nákupoch, reguláciách alebo zmluvných vzťahoch. K vyhoveniu potrebám rôznych skupín v rôznych situáciách boli zadefinované tri úrovne zhoy: A (najnižšia), AA (stredná) a AAA (najvyššia). Ďalšie informácie týkajúce sa úrovní WCAG možno nájsť v <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#levels" lang="en">Understanding Levels of Conformance</a> Ako chápať úrovne súladu.
 					</li>
 					<li>
-						<p><strong>Sufficient and Advisory Techniques</strong> - For each of the <em>guidelines</em> and <em>success criteria</em> in the WCAG 2.1 document itself, the working group has also documented a wide variety of <em>techniques</em>. The techniques are informative and fall into two categories: those that are <em>sufficient</em> for meeting the success criteria and those that are <em>advisory</em>. The advisory techniques go beyond what is required by the individual success criteria and allow authors to better address the guidelines. Some advisory techniques address accessibility barriers that are not covered by the testable success criteria. Where common failures are known, these are also documented. See also <a href="https://www.w3.org/WAI/WCAG21/Understanding/understanding-techniques">Sufficient and Advisory Techniques in Understanding WCAG 2.1</a>.</p>
+						<strong>Postačujúce a odporúčané postupy</strong> – Pracovná skupina pre každé pravidlo a kritérium úspešnosti obsiahnuté v samotnom dokumente WCAG 2.1 zdokumentovala aj široké spektrum postupov. Postupy sú informatívne a spadajú do dvoch kategórií – také, ktoré sú postačujúce pre splnenie kritérií úspešnosti a také, ktoré sú odporúčané. Odporúčané postupy idú nad rámec toho, čo je potrebné pre splnenie jednotlivých kritérií úspešnosti a umožňujú autorom lepšie adresovať jednotlivé pravidlá. Niektoré odporúčané postupy sa zaoberjú aj takými bariérami v prístupnosti, ktoré testovateľné kritériá úspešnosti nepostihujú. Všetky známe a časté chyby boli zdokumentované - pozri aj <a href="https://www.w3.org/WAI/WCAG21/Understanding/understanding-techniques">Postačujúce a odporúčané postupy porozumenia WCAG 2.1</a>.
 					</li>
 				</ul>
-				<p>All of these layers of guidance (principles, guidelines, success criteria, and sufficient and advisory techniques) work together to provide guidance on how to make content more accessible. Authors are encouraged to view and apply all layers that they are able to, including the advisory techniques, in order to best address the needs of the widest possible range of users.</p>
-				<p>Note that even content that conforms at the highest level (AAA) will not be accessible to individuals with all types, degrees, or combinations of disability, particularly in the cognitive language and learning areas. Authors are encouraged to consider the full range of techniques, including the advisory techniques, as well as to seek relevant advice about current best practice to ensure that Web content is accessible, as far as possible, to this community. <a href="https://www.w3.org/WAI/WCAG21/Understanding/understanding-metadata">Metadata</a> may assist users in finding content most suitable for their needs. </p>
+				<p>Všetky tieto úrovne (princípy, pravidlá, kritériá úspešnosti a postačujúce a odporúčané postupy) sa vzájomne dopĺňajú a poskytujú návod na to, ako zabezpečiť, aby bol webový obsah prístupnejší. Všetci autori sú nabádaní, aby sa oboznámili a používali všetky úrovne, ktoré môžu, vrátane odporúčaných postupov, aby čo najlepšie vyhoveli potrebám čo najširšej skupiny používateľov.</p>
+				<p>Je nutné poznamenať, že ani obsah, ktorý vyhovuje najvyššej úrovni (AAA), nebude prístupný osobám so všetkými typmi, stupňami a kombináciami postihnutia, a to najmä v oblasti kognitívnych jazykových porúch a porúch učenia. Autorom sa odporúča zvažovať celé spektrum postupov, vrátane odporúčaných postupov, a mali by sa tiež informovať o najnovších spôsoboch riešenia na zabezpečenie čo najprístupnejšieho webového obsahu aj tejto skupine osôb. <a href="https://www.w3.org/WAI/WCAG21/Understanding/understanding-metadata">Metaúdaje</a> môžu pomôcť používateľom nájsť obsah, ktorý najviac vyhovuje ich potrebám.</p>
 			</section>
 			<section>
-				<h3>WCAG 2.1 Supporting Documents</h3>
-				<p>The WCAG 2.1 document is designed to meet the needs of those who need a stable, referenceable technical standard. Other documents, called supporting documents, are based on the WCAG 2.1 document and address other important purposes, including the ability to be updated to describe how WCAG would be applied with new technologies. Supporting documents include: </p>
+				<h3>Podporné dokumenty WCAG 2.1</h3>
+				<p>Dokument WCAG 2.1 je navrhnutý tak, aby vyhovel tým, ktorí potrebujú stabilný a referencovateľný technický štandard. Ostatné dokumenty, nazývané podporné dokumenty, vychádzajú z dokumentov WCAG 2.0 a riešia iné dôležité účely, vrátane možnosti ich aktualizácie za účelom popísania ako používať WCAG 2.0 s najnovšími technológiami. Podporné dokumenty zahŕňajú:</p>
 				<ol class="enumar">
 					<li>
-						<p><strong><a href="https://www.w3.org/WAI/WCAG21/quickref/">How to Meet WCAG 2.1</a></strong> - A customizable quick reference to WCAG 2.1 that includes all of the guidelines, success criteria, and techniques for authors to use as they are developing and evaluating Web content. This includes content from WCAG 2.0 and WCAG 2.1 and can be filtered in many ways to help authors focus on relevant content.</p>
+						<p><strong><a href="https://www.w3.org/WAI/WCAG21/quickref/">Ako splniť požiadavky WCAG 2.1</a></strong> - stručná, ľahko prispôsobiteľná príručka WCAG 2.1, ktorá obsahuje všetky pravidlá, kritériá úspešnosti a postupy, ktoré môžu autori použiť pri vývoji a hodnotení webového obsahu.  Zahŕňa obsah z WCAG 2.0 a WCAG 2.1 a môže byť filtrovaná mnohými spôsobmi s cieľom napomôcť autorom sústrediť sa na relevantný obsah.</p>
 					</li>
 					<li>
-						<p><strong><a href="https://www.w3.org/WAI/WCAG21/Understanding/">Understanding WCAG 2.1</a></strong> - A guide to understanding and implementing WCAG 2.1. There is a short "Understanding" document for each guideline and success criterion in WCAG 2.1 as well as key topics.</p>
+						<p><strong><a href="https://www.w3.org/WAI/WCAG21/Understanding/">Ako chápať kritérium WCAG 2.1</a></strong> - návod, ako správne chápať a používať WCAG 2.1. Pre každé pravidlo, kritérium úspešnosti, ako aj kľúčové témy existuje stručný dokument, ktorý napomáha ich lepšiemu pochopeniu.</p>
 					</li>
 					<li>
-						<p><strong><a href="https://www.w3.org/WAI/WCAG21/Techniques/">Techniques for WCAG 2.1</a></strong> - A collection of techniques and common failures, each in a separate document that includes a description, examples, code and tests.</p>
+						<p><strong><a href="https://www.w3.org/WAI/WCAG21/Techniques/">Postupy pre WCAG 2.1</a></strong> - Zbierka postupov a častých chýb, rozčlenená do samostatných dokumentov, ktoré obsahujú opis, príklady, zdrojové kódy a testy.</p>
 					</li>
 					<li>
-						<p><strong><a href="https://www.w3.org/WAI/standards-guidelines/wcag/docs/">The WCAG Documents</a></strong> - A diagram and description of how the technical documents are related and linked.</p>
+						<p><strong><a href="https://www.w3.org/WAI/standards-guidelines/wcag/docs/">Dokumenty WCAG</a></strong> - Popis a diagram toho, ako spolu jednotlivé technické dokumenty navzájom súvisia a ako sú prepojené.</p>
 					</li>
 				</ol>
-				<p>See <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG) Overview</a> for a description of the WCAG 2.1 supporting material, including education resources related to WCAG 2. Additional resources covering topics such as the business case for Web accessibility, planning implementation to improve the accessibility of Web sites, and accessibility policies are listed in <a href="https://www.w3.org/WAI/Resources/Overview">WAI Resources</a>.</p>
+				<p>Ďalšie informácie o podporných dokumentoch WCAG 2.0, vrátane výučbových materiálov súvisiacich s WCAG 2 možno nájsť v <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Súhrne k pravidlám pre prístupnosť webového obsahu</a>. Ďalšie zdroje ohľadom tém, ako sú prípadové štúdie prístupnosti webového obsahu, plánovanie implementácie na zlepšovanie prístupnosti webových sídiel a pravidlá prístupnosti, sú v zozname v <a href="https://www.w3.org/WAI/Resources/Overview">Zdroje WAI</a>.</p>
 			</section>
-        	<section>
-        		<h3>Requirements for WCAG 2.1</h3>
-                <p>WCAG 2.1 meets a set of <a href="https://w3c.github.io/wcag/requirements/">requirements for WCAG 2.1</a> which, in turn, inherit requirements from WCAG 2.0. Requirements structure the overall framework of guidelines and ensure backwards compatibility. The Working Group also used a less formal set of acceptance criteria for success criteria, to help ensure success criteria are similar in style and quality to those in WCAG 2.0. These requirements constrained what could be included in WCAG 2.1. This constraint was important to preserve its nature as a dot-release of WCAG 2.</p>
-        	</section>
-    		<section>
-                <h3>Comparison with WCAG 2.0</h3>
-                <p>WCAG 2.1 was initiated with the goal to improve accessibility guidance for three major groups: users with cognitive or learning disabilities, users with low vision, and users with disabilities on mobile devices. Many ways to meet these needs were proposed and evaluated, and a set of these were refined by the Working Group. Structural requirements inherited from WCAG 2.0, clarity and impact of proposals, and timeline led to the final set of success criteria included in this version. The Working Group considers that WCAG 2.1 incrementally advances web content accessibility guidance for all these areas, but underscores that not all user needs are met by these guidelines.</p>
-
-				<p>WCAG 2.1 builds on and is backwards compatible with WCAG 2.0, meaning web pages that conform to WCAG 2.1 also conform to WCAG 2.0. Authors that are required by policy to conform with WCAG 2.0 will be able to update content to WCAG 2.1 without losing conformance with WCAG 2.0. Authors following both sets of guidelines should be aware of the following differences:</p>
+			<section>
+				<h3>Požiadavky na WCAG 2.1</h3>
+				<p>WCAG 2.1 spĺňa súbor <a href="https://w3c.github.io/wcag/requirements/">požiadaviek pre WCAG 2.1</a>, ktoré zase preberajú požiadavky z WCAG 2.0. Požiadavky stanovujú štruktúru celkového rámca pravidiel a zabezpečujú spätnú kompatibilitu. Pracovná skupina použila aj menej formálny súbor akceptačných kritérií pre kritériá úspešnosti s cieľom zabezpečiť, aby sa štýl a kvalita kritérií úspešnosti podobali tým, ktoré sú uvedené vo WCAG 2.0. Tieto požiadavky obmedzili, čo mohlo byť zahrnuté do WCAG 2.1. Toto obmedzenie bolo dôležité pre zachovanie charakteru WCAG 2 ako verzionovaného vydania.</p>
+			</section>
+			<section>
+				<h3>Porovnanie s WCAG 2.0</h3>
+				<p>Zostavenie WCAG 2.1 bolo iniciované s cieľom zlepšiť poradenstvo v oblasti prístupnosti pre tri hlavné skupiny: používateľov s kognitívnymi poruchami alebo poruchami učenia, používateľov so zhoršeným videním a používateľov s postihnutím, ktorí používajú mobilné zariadenia. Boli navrhnuté a vyhodnotené mnohé spôsoby na uspokojenie týchto potrieb a pracovná skupina zdokonalila určitý súbor z nich. Štrukturálne požiadavky zdedené z WCAG 2.0, jasnosť a vplyv návrhov, ako aj časový rámec viedli k vzniku konečného súboru kritérií úspešnosti, ktoré boli zahrnuté do tejto verzie. Pracovná skupina sa domnieva, že WCAG 2.1 pozitívne rozširuje pravidlá pre prístupnosť webového obsahu pre všetky tieto oblasti, ale zdôrazňuje, že tieto pravidlá nenapĺňajú úplne všetky potreby používateľov.</p>
+				<p>WCAG 2.1 vychádza z WCAG 2.0 a je s ňou spätne kompatibilná, čo znamená, že webové stránky, ktoré spĺňajú WCAG 2.1, spĺňajú aj WCAG 2.0. Autori, ktorých niektoré politika zaväzuje dodržiavať WCAG 2.0, budú môcť aktualizovať obsah na WCAG 2.1 bez straty súladu s WCAG 2.0. Autori, ktorí dodržiavajú obe skupiny pravidiel, by si mali byť vedomí nasledujúcich rozdielov:</p>
 				<section>
-					<h4>New Features in WCAG 2.1</h4>
-					<p>WCAG 2.1 extends WCAG 2.0 by adding new success criteria, definitions to support them, guidelines to organize the additions, and a couple additions to the conformance section. This additive approach helps to make it clear that sites which conform to WCAG 2.1 also conform to WCAG 2.0, thereby meeting conformance obligations that are specific to WCAG 2.0. The Accessibility Guidelines Working Group recommends that sites adopt WCAG 2.1 as their new conformance target, even if formal obligations mention WCAG 2.0, to provide improved accessibility and to anticipate future policy changes.</p>
-					<p>The following Success Criteria are new in WCAG 2.1:</p>
+					<h4>Nové vlastnosti vo WCAG 2.1</h4>
+					<p>WCAG 2.1 rozširuje WCAG 2.0 o nové kritériá úspešnosti, definície na ich podporu, pravidlá pre organizovanie doplnkov a niekoľko doplnení v časti o súlade. Tento prístup vo forme pridávania napomáha jednoznačnosti, že sídla, ktoré spĺňajú WCAG 2.1, spĺňajú tiež WCAG 2.0, čím sa zároveň spĺňajú povinnosti zachovania súladu špecificky voči WCAG 2.0. Pracovná skupina pre pravidlá prístupnosti odporúča, aby si sídla osvojili ako svoj nový cieľ dodržiavania WCAG 2.1, aj keď formálne povinnosti uvádzajú WCAG 2.0, čím sa zabezpečí lepšia prístupnosť a predvídanie budúcich zmien politík.</p>
+					<p>Nasledujúce kritériá úspešnosti vo WCAG 2.1 sú nové:</p>
 					<ul>
-						<li>1.3.4 <a href="#orientation">Orientation</a> (AA)</li>
-						<li>1.3.5 <a href="#identify-input-purpose">Identify Input Purpose</a> (AA)</li>
-						<li>1.3.6 <a href="#identify-purpose">Identify Purpose</a> (AAA)</li>
-						<li>1.4.10 <a href="#reflow">Reflow</a> (AA)</li>
-						<li>1.4.11 <a href="#non-text-contrast">Non-Text Contrast</a> (AA)</li>
-						<li>1.4.12 <a href="#text-spacing">Text Spacing</a> (AA)</li>
-						<li>1.4.13 <a href="#content-on-hover-or-focus">Content on Hover or Focus</a> (AA)</li>
-						<li>2.1.4 <a href="#character-key-shortcuts">Character Key Shortcuts</a> (A)</li>
-						<li>2.2.6 <a href="#timeouts">Timeouts</a> (AAA)</li>
-						<li>2.3.3 <a href="#animation-from-interactions">Animation from Interactions</a> (AAA)</li>
-						<li>2.5.1 <a href="#pointer-gestures">Pointer Gestures</a> (A)</li>
-						<li>2.5.2 <a href="#pointer-cancellation">Pointer Cancellation</a> (A)</li>
-						<li>2.5.3 <a href="#label-in-name">Label in Name</a> (A)</li>
-						<li>2.5.4 <a href="#motion-actuation">Motion Actuation</a> (A)</li>
-						<li>2.5.5 <a href="#target-size">Target Size</a> (AAA)</li>
-						<li>2.5.6 <a href="#concurrent-input-mechanisms">Concurrent Input Mechanisms</a> (AAA)</li>
-						<li>4.1.3 <a href="#status-messages">Status Messages</a> (AA)</li>
+						<li>1.3.4 <a href="#orientation">Orientácia</a> (AA)</li>
+						<li>1.3.5 <a href="#identify-input-purpose">Identifikácia účelu vstupu</a> (AA)</li>
+						<li>1.3.6 <a href="#identify-purpose">Identifikácia účelu</a> (AAA)</li>
+						<li>1.4.10 <a href="#reflow">Preformátovanie toku</a> (AA)</li>
+						<li>1.4.11 <a href="#non-text-contrast">Netextový kontrast</a> (AA)</li>
+						<li>1.4.12 <a href="#text-spacing">Rozloženie textu</a> (AA)</li>
+						<li>1.4.13 <a href="#content-on-hover-or-focus">Obsah pri zameraní myšou alebo kurzorom</a> (AA)</li>
+						<li>2.1.4 <a href="#character-key-shortcuts">Jednoznakové klávesové skratky</a> (A)</li>
+						<li>2.2.6 <a href="#timeouts">Časové limity</a> (AAA)</li>
+						<li>2.3.3 <a href="#animation-from-interactions">Animácia z interakcií</a> (AAA)</li>
+						<li>2.5.1 <a href="#pointer-gestures">Pohyby ukazovateľov</a> (A)</li>
+						<li>2.5.2 <a href="#pointer-cancellation">Zrušenie ukazovateľa</a> (A)</li>
+						<li>2.5.3 <a href="#label-in-name">Popis v názve</a> (A)</li>
+						<li>2.5.4 <a href="#motion-actuation">Aktivácia pohybu</a> (A)</li>
+						<li>2.5.5 <a href="#target-size">Veľkosť cieľa</a> (AAA)</li>
+						<li>2.5.6 <a href="#concurrent-input-mechanisms">Mechanizmy súčasného zadávania vstupu</a> (AAA)</li>
+						<li>4.1.3 <a href="#status-messages">Stavové správy</a> (AA)</li>
 					</ul>
-					<p>The new success criteria may reference new terms that have also been added to the glossary and form part of the normative requirements of the success criteria.</p>
-					<p>In the Conformance section, a third note about page variants has been added to <a href="#cc2">Full Pages</a>, and an option for machine-readable metadata added to <a href="#conformance-optional">Optional Components of a Conformance Claim</a>.</p>
+					<p>Mnohé z týchto kritérií úspešnosti odkazujú na nové pojmy, ktoré boli pridané do Slovníka pojmov, pričom sú súčasťou normatívnych požiadaviek kritérií úspešnosti.</p>
+					<p>V časti o súlade bola do <a href="#cc2">celých stránok</a> pridaná tretia poznámka o variantoch webových stránok a do <a href="#conformance-optional">voliteľných prvkov vyhlásenia o súlade</a> bola pridaná možnosť pre programovo čitateľné metaúdaje.</p>
 				</section>
 				<section>
-					<h4>Numbering in WCAG 2.1</h4>
-					<p>In order to avoid confusion for implementers for whom backwards compatibility to WCAG 2.0 is important, new success criteria in WCAG 2.1 have been appended to the end of the set of success criteria within their guideline. This avoids the need to change the section number of success criteria from WCAG 2.0, which would be caused by inserting new success criteria between existing success criteria in the guideline, but it means success criteria in each guideline are no longer grouped by conformance level. The order of success criteria within each guideline does not imply information about conformance level; only the conformance level indicator (A / AA / AAA) on the success criterion itself indicates this. The <a href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG 2.1 Quick Reference</a> provides ways to view success criteria grouped by conformance level, along with many other filter and sort options.</p>
+					<h4>Číslovanie vo WCAG 2.1</h4>
+					<p>S cieľom vyhnúť sa nejasnostiam zo strany vývojárov, pre ktorých je dôležitá spätná kompatibilita s WCAG 2.0, boli nové kritériá úspešnosti vo WCAG 2.1 pridané na koniec súboru kritérií úspešnosti v rámci týchto pravidiel. Týmto sa zabránilo potrebe meniť číslovanie kritérií úspešnosti danej časti z WCAG 2.0, k čomu by inak došlo vkladaním nových kritérií úspešnosti medzi existujúce kritériá úspešnosti v týchto pravidlách, ale to znamená aj, že kritériá úspešnosti v každom pravidle už nie sú zoskupené podľa úrovne súladu. Poradie kritérií úspešnosti v rámci jednotlivých pravidiel nepredstavuje informácie o úrovni súladu - označuje to iba ukazovateľ úrovne súladu (A/AA/AAA) v samotnom kritériu úspešnosti. <a href="https://www.w3.org/WAI/WCAG21/quickref/">Rýchla príručka ako splniť WCAG 2.1</a> poskytuje spôsoby, akými je možné zobraziť kritériá úspešnosti zoskupené podľa úrovne súladu, spolu s mnohými ďalšími možnosťami filtrovania a triedenia.</p>
 				</section>
 				<section>
-					<h4>Conformance to WCAG 2.1</h4>
-					<p>WCAG 2.1 uses the same conformance model as WCAG 2.0 with a couple additions, which is described in the <a href="#conformance">Conformance</a> section. It is intended that sites that conform to WCAG 2.1 also conform to WCAG 2.0, which means they meet the requirements of any policies that reference WCAG 2.0, while also better meeting the needs of users on the current Web. </p>
+					<h4>Súlad s WCAG 2.1</h4>
+					<p>WCAG 2.1 využíva rovnaký model zachovania súladu ako WCAG 2.0 s niekoľkými doplnkami, ktoré sú opísané v časti <a href="#conformance">Súlad s pravidlami</a>. Zámerom je, aby sídla vyhovujúce WCAG 2.1 boli tiež v súlade s WCAG 2.0, čo znamená, že musia spĺňať požiadavky akejkoľvek politiky, ktorá odkazuje na WCAG 2.0, a zároveň lepšie uspokojujú potreby používateľov na súčasnom webe.</p>
 				</section>
 			</section>
-        	<section>
-        		<h3>Later Versions of Accessibility Guidelines</h3>
-        		<p>In parallel with WCAG 2.1, the Accessibility Guidelines Working Group is developing another major version of accessibility guidelines. The result of this work is expected to be a more substantial restructuring of web accessibility guidance than would be realistic for dot-releases of WCAG 2. The work follows a research-focused, user-centered design methodology to produce the most effective and flexible outcome, including the roles of content authoring, user agent support, and authoring tool support. This is a multi-year effort, so WCAG 2.1 is needed as an interim measure to provide updated web accessibility guidance to reflect changes on the web since the publication of WCAG 2.0. The Working Group might also develop additional interim versions, continuing with WCAG 2.2, on a similar short timeline to provide additional support while the major version is completed. </p>
-        	</section>
-        </section>
-        <section class="principle" id="perceivable">
-            <h2> Perceivable </h2>
-            <p>Information and user interface components must be presentable to users in ways they can perceive.</p>
+			<section>
+				<h3>Neskoršie verzie pravidiel pre prístupnosť</h3>
+				<p>Pracovná skupina pre pravidlá pre prístupnosť vypracúva súbežne s WCAG 2.1 ďalšiu hlavnú verziu pravidiel prístupnosti. Očakáva sa, že výsledkom týchto prác bude podstatnejšia reštrukturalizácia pravidiel webovej prístupnosti, než by vyplynula z menších verzií vydania WCAG 2. Táto práca je založená na výskumných metódach a dizajne orientovanom na používateľa, s cieľom dosiahnuť čo najefektívnejší a najflexibilnejší výsledok, zahŕňajúc úlohy tvorby obsahu, podpory nástrojov používateľa a podpory nástrojov pre tvorbu webového obsahu. Ide o viacročné úsilie, preto je potrebné zaviesť WCAG 2.1 ako dočasné opatrenie s cieľom poskytnúť aktualizované pravidlá pre prístupnosť webového obsahu, ktoré odrážajú zmeny na webe, ktoré nastali od uverejnenia WCAG 2.0. Pracovná skupina možno vypracuje aj ďalšie menšie verzie, pokračujúc od WCAG 2.2, poskytujúc tak doplňujúcu podporu na podobne krátkej časovej osi do dokončenia hlavnej verzie.</p>
+			</section>
+		</section>
+		<section class="principle" id="perceivable">
+			<h2>Vnímateľný</h2>
+			<p>Informácie a prvky používateľského rozhrania musia byť používateľom prezentovateľné spôsobmi, ktoré dokážu vnímať.</p>
 
-            <section class="guideline">
-                <h3>Text Alternatives</h3>
-                <p>Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.</p>
+			<section class="guideline">
+				<h3>Textové alternatívy</h3>
+				<p>Pre každý netextový obsah sa poskytnú textové alternatívy, a to tak, aby ho podľa potreby bolo možné zmeniť na iné formy, ktoré ľudia potrebujú, ako napr. zväčšené písmo, Braillovo písmo, reč, symboly alebo zjednodušený jazyk.</p>
 
-                <section data-include="sc/20/non-text-content.html" data-include-replace="true"></section>
-            </section>
+				<section data-include="sc/20/non-text-content.html" data-include-replace="true"></section>
+			</section>
 
-            <section class="guideline">
-                <h3>Time-based Media</h3>
-                <p>Provide alternatives for time-based media.</p>
+			<section class="guideline">
+				<h3>Dynamické multimediálne prvky</h3>
+				<p>Pre dynamické multimediálne prvky sa poskytujú alternatívy.</p>
 
-                <section data-include="sc/20/audio-only-and-video-only-prerecorded.html" data-include-replace="true"></section>
+				<section data-include="sc/20/audio-only-and-video-only-prerecorded.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/captions-prerecorded.html" data-include-replace="true"></section>
+				<section data-include="sc/20/captions-prerecorded.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/audio-description-or-media-alternative-prerecorded.html" data-include-replace="true"></section>
+				<section data-include="sc/20/audio-description-or-media-alternative-prerecorded.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/captions-live.html" data-include-replace="true"></section>
+				<section data-include="sc/20/captions-live.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/audio-description-prerecorded.html" data-include-replace="true"></section>
+				<section data-include="sc/20/audio-description-prerecorded.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/sign-language-prerecorded.html" data-include-replace="true"></section>
+				<section data-include="sc/20/sign-language-prerecorded.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/extended-audio-description-prerecorded.html" data-include-replace="true"></section>
+				<section data-include="sc/20/extended-audio-description-prerecorded.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/media-alternative-prerecorded.html" data-include-replace="true"></section>
+				<section data-include="sc/20/media-alternative-prerecorded.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/audio-only-live.html" data-include-replace="true"></section>
-            </section>
+				<section data-include="sc/20/audio-only-live.html" data-include-replace="true"></section>
+			</section>
 
-            <section class="guideline">
-                <h3>Adaptable</h3>
-                <p>Create content that can be presented in different ways (for example simpler layout) without losing information or structure.</p>
+			<section class="guideline">
+				<h3>Prispôsobiteľný</h3>
+				<p>Vytvára sa obsah, ktorý je možné prezentovať rôznymi spôsobmi (napríklad s jednoduchším vzhľadom) bez straty informácií alebo štruktúry.</p>
 
-                <section data-include="sc/20/info-and-relationships.html" data-include-replace="true"></section>
+				<section data-include="sc/20/info-and-relationships.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/meaningful-sequence.html" data-include-replace="true"></section>
+				<section data-include="sc/20/meaningful-sequence.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/sensory-characteristics.html" data-include-replace="true"></section>
+				<section data-include="sc/20/sensory-characteristics.html" data-include-replace="true"></section>
 
-                <section data-include="sc/21/orientation.html" data-include-replace="true"></section>
+				<section data-include="sc/21/orientation.html" data-include-replace="true"></section>
 
-                <section data-include="sc/21/identify-input-purpose.html" data-include-replace="true"></section>
-              
-                <section data-include="sc/21/identify-purpose.html" data-include-replace="true"></section>
+				<section data-include="sc/21/identify-input-purpose.html" data-include-replace="true"></section>
+			  
+				<section data-include="sc/21/identify-purpose.html" data-include-replace="true"></section>
 
-          </section>
+		  </section>
 
-            <section class="guideline">
-                <h3>Distinguishable</h3>
-                <p>Make it easier for users to see and hear content including separating foreground from background.</p>
+			<section class="guideline">
+				<h3>Rozlíšiteľný</h3>
+				<p>Uľahčite používateľom prezeranie a počúvanie obsahu, vrátane oddeľovania popredia od pozadia.</p>
 
-                <section data-include="sc/20/use-of-color.html" data-include-replace="true"></section>
+				<section data-include="sc/20/use-of-color.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/audio-control.html" data-include-replace="true"></section>
+				<section data-include="sc/20/audio-control.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/contrast-minimum.html" data-include-replace="true"></section>
+				<section data-include="sc/20/contrast-minimum.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/resize-text.html" data-include-replace="true"></section>
+				<section data-include="sc/20/resize-text.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/images-of-text.html" data-include-replace="true"></section>
+				<section data-include="sc/20/images-of-text.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/contrast-enhanced.html" data-include-replace="true"></section>
+				<section data-include="sc/20/contrast-enhanced.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/low-or-no-background-audio.html" data-include-replace="true"></section>
+				<section data-include="sc/20/low-or-no-background-audio.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/visual-presentation.html" data-include-replace="true"></section>
+				<section data-include="sc/20/visual-presentation.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/images-of-text-no-exception.html" data-include-replace="true"></section>
+				<section data-include="sc/20/images-of-text-no-exception.html" data-include-replace="true"></section>
 
-                <section data-include="sc/21/reflow.html" data-include-replace="true"></section>
+				<section data-include="sc/21/reflow.html" data-include-replace="true"></section>
 
-                <section data-include="sc/21/non-text-contrast.html" data-include-replace="true"></section>
+				<section data-include="sc/21/non-text-contrast.html" data-include-replace="true"></section>
 
-                <section data-include="sc/21/text-spacing.html" data-include-replace="true"></section>
+				<section data-include="sc/21/text-spacing.html" data-include-replace="true"></section>
 
-                <section data-include="sc/21/content-on-hover-or-focus.html" data-include-replace="true"></section>
+				<section data-include="sc/21/content-on-hover-or-focus.html" data-include-replace="true"></section>
 
-            </section>
+			</section>
 
-        </section>
-        <section class="principle" id="operable">
-            <h2>Operable </h2>
-            <p>User interface components and navigation must be operable.</p>
+		</section>
+		<section class="principle" id="operable">
+			<h2>Ovládateľný </h2>
+			<p>Všetky prvky používateľského rozhrania a navigácie musia byť ovládateľné.</p>
 
-            <section class="guideline">
-                <h3>Keyboard Accessible</h3>
-                <p>Make all functionality available from a keyboard.</p>
+			<section class="guideline">
+				<h3>Prístupnosť z klávesnice</h3>
+				<p>Zabezpečuje sa, aby boli všetky funkcie dostupné z klávesnice.</p>
 
-                <section data-include="sc/20/keyboard.html" data-include-replace="true"></section>
+				<section data-include="sc/20/keyboard.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/no-keyboard-trap.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/keyboard-no-exception.html" data-include-replace="true"></section>
-              
-                <section data-include="sc/21/character-key-shortcuts.html" data-include-replace="true"></section>
-                
-            </section>
-
-            <section class="guideline">
-                <h3>Enough Time</h3>
-                <p>Provide users enough time to read and use content.</p>
-
-                <section data-include="sc/20/timing-adjustable.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/pause-stop-hide.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/no-timing.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/interruptions.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/re-authenticating.html" data-include-replace="true"></section>
-
-                <section data-include="sc/21/timeouts.html" data-include-replace="true"></section> 
-
-            </section>
-
-            <section class="guideline new">
-                <h3>Seizures and Physical Reactions</h3>
-                <p>Do not design content in a way that is known to cause seizures or physical reactions.</p>
-
-                <section data-include="sc/20/three-flashes-or-below-threshold.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/three-flashes.html" data-include-replace="true"></section>
-                
-                <section data-include="sc/21/animation-from-interactions.html" data-include-replace="true"></section>
-
-            </section>
-
-            <section class="guideline">
-                <h3>Navigable</h3>
-                <p>Provide ways to help users navigate, find content, and determine where they are.</p>
-
-                <section data-include="sc/20/bypass-blocks.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/page-titled.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/focus-order.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/link-purpose-in-context.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/multiple-ways.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/headings-and-labels.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/focus-visible.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/location.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/link-purpose-link-only.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/section-headings.html" data-include-replace="true"></section>
-
-            </section>
-
-            <section class="guideline new">
-                <h3>Input Modalities</h3>
-                <p class="change">New</p>
-                <p>Make it easier for users to operate functionality through various inputs beyond keyboard.</p>
-
-                <section data-include="sc/21/pointer-gestures.html" data-include-replace="true"></section>
-
-                <section data-include="sc/21/pointer-cancellation.html" data-include-replace="true"></section>
-
-              	<section data-include="sc/21/label-in-name.html" data-include-replace="true"></section>
-            	
-                <section data-include="sc/21/motion-actuation.html" data-include-replace="true"></section>
-
-                <section data-include="sc/21/target-size.html" data-include-replace="true"></section>
-
-                <section data-include="sc/21/concurrent-input-mechanisms.html" data-include-replace="true"></section>
-
-            </section>
-
-        </section>
-        <section class="principle" id="understandable">
-            <h2> Understandable </h2>
-            <p>Information and the operation of the user interface must be understandable.</p>
-
-            <section class="guideline">
-                <h3>Readable</h3>
-                <p>Make text content readable and understandable.</p>
-
-                <section data-include="sc/20/language-of-page.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/language-of-parts.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/unusual-words.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/abbreviations.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/reading-level.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/pronunciation.html" data-include-replace="true"></section>
-
-            </section>
-
-            <section class="guideline">
-                <h3>Predictable</h3>
-                <p>Make Web pages appear and operate in predictable ways.</p>
-
-                <section data-include="sc/20/on-focus.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/on-input.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/consistent-navigation.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/consistent-identification.html" data-include-replace="true"></section>
-
-                <section data-include="sc/20/change-on-request.html" data-include-replace="true"></section>
+				<section data-include="sc/20/no-keyboard-trap.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/keyboard-no-exception.html" data-include-replace="true"></section>
+			  
+				<section data-include="sc/21/character-key-shortcuts.html" data-include-replace="true"></section>
 				
-            </section>
+			</section>
 
-            <section class="guideline">
-                <h3>Input Assistance</h3>
-                <p>Help users avoid and correct mistakes.</p>
+			<section class="guideline">
+				<h3>Dostatok času</h3>
+				<p>Používateľom sa poskytuje dostatok času na prečítanie a používanie obsahu.</p>
 
-                <section data-include="sc/20/error-identification.html" data-include-replace="true"></section>
+				<section data-include="sc/20/timing-adjustable.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/labels-or-instructions.html" data-include-replace="true"></section>
+				<section data-include="sc/20/pause-stop-hide.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/error-suggestion.html" data-include-replace="true"></section>
+				<section data-include="sc/20/no-timing.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/error-prevention-legal-financial-data.html" data-include-replace="true"></section>
+				<section data-include="sc/20/interruptions.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/help.html" data-include-replace="true"></section>
+				<section data-include="sc/20/re-authenticating.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/error-prevention-all.html" data-include-replace="true"></section>
+				<section data-include="sc/21/timeouts.html" data-include-replace="true"></section> 
 
-            </section>
+			</section>
 
-        </section>
-        <section class="principle" id="robust">
-            <h2> Robust </h2>
-            <p>Content must be robust enough that it can be interpreted by a wide variety of user agents, including assistive technologies.</p>
+			<section class="guideline new">
+				<h3>Záchvaty a fyzické reakcie</h3>
+				<p>Obsah sa nevytvára spôsobom, o ktorom je známe, že spôsobuje záchvaty alebo fyzické reakcie.</p>
 
-            <section class="guideline">
-                <h3>Compatible</h3>
-                <p>Maximize compatibility with current and future user agents, including assistive technologies.</p>
+				<section data-include="sc/20/three-flashes-or-below-threshold.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/parsing.html" data-include-replace="true"></section>
+				<section data-include="sc/20/three-flashes.html" data-include-replace="true"></section>
+				
+				<section data-include="sc/21/animation-from-interactions.html" data-include-replace="true"></section>
 
-                <section data-include="sc/20/name-role-value.html" data-include-replace="true"></section>
-                
-                <section data-include="sc/21/status-messages.html" data-include-replace="true"></section>
-                
-           </section>
+			</section>
 
-        </section>
-        <section>
-            <h1>Conformance</h1>
+			<section class="guideline">
+				<h3>Jednoduchá navigácia</h3>
+				<p>Uľahčite používateľom navigáciu, vyhľadávanie obsahu a určovanie toho, kde sa nachádzajú.</p>
 
-            <p>This section lists requirements for <a>conformance</a> to WCAG 2.1. It also gives information about how to make conformance claims, which are optional. Finally, it describes what it means to be <a>accessibility supported</a>, since only accessibility-supported ways of using technologies can be <a>relied upon</a> for conformance. <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance">Understanding Conformance</a> includes further explanation of the accessibility-supported concept.</p>
-        	
-        	<section>
-        		<h2>Interpreting Normative Requirements</h2>
-        		
-        		<p>The main content of WCAG 2.1 is <a>normative</a> and defines requirements that impact conformance claims. Introductory material, appendices, sections marked as "non-normative", diagrams, examples, and notes are <a>informative</a> (non-normative). Non-normative material provides advisory information to help interpret the guidelines but does not create requirements that impact a conformance claim.</p>
-        		<p>The key words MAY, MUST, MUST NOT, NOT RECOMMENDED, RECOMMENDED, SHOULD, and SHOULD NOT are to be interpreted as described in [[RFC2119]].</p>
-        	</section>
+				<section data-include="sc/20/bypass-blocks.html" data-include-replace="true"></section>
 
-            <section id="conformance-reqs">
-                <h2>Conformance Requirements</h2>
-                <p>In order for a Web page to conform to WCAG 2.1, all of the following conformance requirements must be satisfied:</p>
+				<section data-include="sc/20/page-titled.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/focus-order.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/link-purpose-in-context.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/multiple-ways.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/headings-and-labels.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/focus-visible.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/location.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/link-purpose-link-only.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/section-headings.html" data-include-replace="true"></section>
+
+			</section>
+
+			<section class="guideline new">
+				<h3>Vstupné metódy</h3>
+				<p class="change">New</p>
+				<p>Používateľom sa uľahčuje ovládanie funkcií okrem klávesnice aj inými spôsobmi.</p>
+
+				<section data-include="sc/21/pointer-gestures.html" data-include-replace="true"></section>
+
+				<section data-include="sc/21/pointer-cancellation.html" data-include-replace="true"></section>
+
+			  	<section data-include="sc/21/label-in-name.html" data-include-replace="true"></section>
+				
+				<section data-include="sc/21/motion-actuation.html" data-include-replace="true"></section>
+
+				<section data-include="sc/21/target-size.html" data-include-replace="true"></section>
+
+				<section data-include="sc/21/concurrent-input-mechanisms.html" data-include-replace="true"></section>
+
+			</section>
+
+		</section>
+		<section class="principle" id="understandable">
+			<h2> Zrozumiteľný </h2>
+			<p>Informácie a ovládanie používateľského rozhrania musia byť zrozumiteľné.</p>
+
+			<section class="guideline">
+				<h3>Čitateľný</h3>
+				<p>Je nutné zabezpečiť, aby bol textový obsah čitateľný a zrozumiteľný.</p>
+
+				<section data-include="sc/20/language-of-page.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/language-of-parts.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/unusual-words.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/abbreviations.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/reading-level.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/pronunciation.html" data-include-replace="true"></section>
+
+			</section>
+
+			<section class="guideline">
+				<h3>Predvídateľný</h3>
+				<p>Je nutné zabezpečiť, aby boli vzhľad a ovládanie webových stránok predvídateľné.</p>
+
+				<section data-include="sc/20/on-focus.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/on-input.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/consistent-navigation.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/consistent-identification.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/change-on-request.html" data-include-replace="true"></section>
+				
+			</section>
+
+			<section class="guideline">
+				<h3>Pomoc pri zadávaní vstupu</h3>
+				<p>Je potrebné pomôcť používateľom vyhnúť sa chybám a opraviť ich.</p>
+
+				<section data-include="sc/20/error-identification.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/labels-or-instructions.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/error-suggestion.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/error-prevention-legal-financial-data.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/help.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/error-prevention-all.html" data-include-replace="true"></section>
+
+			</section>
+
+		</section>
+		<section class="principle" id="robust">
+			<h2> Robustný </h2>
+			<p>Obsah musí byť dostatočne robustný na to, aby mohol byť spoľahlivo interpretovaný širokou škálou nástrojov používateľa, vrátane asistenčných technológií.</p>
+
+			<section class="guideline">
+				<h3>Kompatibilný</h3>
+				<p>Účelom je maximalizovať kompatibilitu so súčasnými a budúcimi nástrojmi používateľa, vrátane asistenčných technológií.</p>
+
+				<section data-include="sc/20/parsing.html" data-include-replace="true"></section>
+
+				<section data-include="sc/20/name-role-value.html" data-include-replace="true"></section>
+				
+				<section data-include="sc/21/status-messages.html" data-include-replace="true"></section>
+				
+		   </section>
+
+		</section>
+		<section>
+			<h1>Súlad s pravidlami</h1>
+
+			<p>V tejto časti sú uvedené požiadavky na <a>súlad</a> s WCAG 2.1., ako aj informácie o tom, ako sa majú vytvárať vyhlásenia o súlade, ktoré sú však nepovinné. A nakoniec popisuje, čo znamená <a>podporovať prístupnosť</a>, nakoľko len na tie spôsoby používania technológií, ktoré podporujú prístupnosť, je možné <a>sa spoliehať</a> pri dosahovaní súladu. Ďalšie vysvetlenie koncepcie podporovanej prístupnosti zahŕňa časť <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance">Ako chápať Súlad</a>.</p>
+			
+			<section>
+				<h2>Výklad normatívnych požiadaviek</h2>
+				
+				<p>Hlavný obsah WCAG 2.1 je <a>normatívny</a> a určuje požiadavky, ktoré majú vplyv na tvrdenia o zabezpečení zhody. Úvodný materiál, prílohy, časti označené ako „nenormatívne“, diagramy, príklady a poznámky sú <a>informatívne</a> (nenormatívne). Nenormatívny materiál poskytuje poradenské informácie, ktoré pomáhajú interpretovať pravidlá, ale nevytvárajú požiadavky, ktoré majú vplyv na tvrdenia o zabezpečení zhody.</p>
+				<p>Kľúčové slová MÔCŤ, MUSIEŤ, NESMIEŤ, NEODPORÚČAŤ, ODPORÚČAŤ, MAL BY a  NEMAL BY je potrebné vykladať spôsobom popísaným v [[RFC2119]].</p>
+			</section>
+
+			<section id="conformance-reqs">
+				<h2>Požiadavky na súlad</h2>
+				<p>Aby bola webová stránka v súlade s pravidlami WCAG 2.1, musia byť splnené všetky nasledujúce požiadavky na súlad:</p>
 
 				<!-- This section is quoted in Understanding Conformance. If updated, the update needs to be copied there. -->
-                <section id="cc1">
-                    <h3>Conformance Level</h3>
-                    <p>One of the following levels of conformance is met in full.</p>
-                    <ul>
-                        <li>For Level A conformance (the minimum level of conformance), the <a>Web page</a>
-                            <a>satisfies</a> all the Level A Success Criteria, or a <a>conforming alternate version</a> is provided.</li>
-                        <li>For Level AA conformance, the Web page satisfies all the Level A and Level AA Success Criteria, or a Level AA conforming alternate version is provided.</li>
-                        <li>For Level AAA conformance, the Web page satisfies all the Level A, Level AA and Level AAA Success Criteria, or a Level AAA conforming alternate version is provided.</li>
-                    </ul>
-                    <p class="note">Although conformance can only be achieved at the stated levels, authors are encouraged to report (in their claim) any progress toward meeting success criteria from all levels beyond the achieved level of conformance.</p>
-                    <p class="note">It is not recommended that Level AAA conformance be required as a general policy for entire sites because it is not possible to satisfy all Level AAA Success Criteria for some content.</p>
-                </section>
+				<section id="cc1">
+					<h3>Úroveň súladu</h3>
+					<p>Jedna z nasledujúcich úrovní súladu musí byť splnená v celom rozsahu:</p>
+					<ul>
+						<li>pri úrovni súladu A (minimálna úroveň súladu) <a>webová stránka</a>
+							<a>spĺňa</a> všetky kritériá úspešnosti úrovne A alebo je poskytovaná <a>vyhovujúca alternatívna verzia</a>, ktorá ich spĺňa,</li>
+						<li>pri úrovni súladu AA, spĺňa webová stránka všetky kritériá úspešnosti úrovne A a úrovne
+							úrovne AA, alebo je poskytovaná vyhovujúca alternatívna verzia spĺňajúca úroveň AA,</li>
+						<li>pri úrovni súladu AAA, spĺňa webová stránka všetky kritériá úspešnosti úrovne A, úrovne AA a úrovne AAA, alebo je poskytovaná vyhovujúca alternatívna verzia spĺňajúca úroveň AAA.</li>
+					</ul>
+					<p class="note">Napriek tomu, že zhodu možno dosiahnuť len na uvedených úrovniach, autorom sa odporúča, aby (vo svojom vyhlásení) oznamovali akékoľvek kroky, prijímané s cieľom splniť kritériá úspešnosti na všetkých úrovniach nad rámec dosiahnutej úrovne súladu.</p>
+					<p class="note">Vo všeobecnosti sa neodporúča vyžadovať zhodu úrovne AAA pre celé sídla, pretože niektorý obsah nedokáže splniť všetky kritéria úspešnosti úrovne AAA.</p>
+				</section>
 
-            	<!-- This section is quoted in Understanding Conformance. If updated, the update needs to be copied there. -->
-            	<section id="cc2">
-                    <h3>Full pages</h3>
-                    <p><a>Conformance</a> (and conformance level) is for full <a>Web page(s)</a> only, and cannot be achieved if part of a Web page is excluded.</p>
-                    <p class="note">For the purpose of determining conformance, alternatives to part of a page's content are considered part of the page when the alternatives can be obtained directly from the page, e.g., a long description or an alternative presentation of a video.</p>
-                    <p class="note">Authors of Web pages that cannot conform due to content outside of the author's control may consider a <a href="#conformance-partial">Statement of Partial Conformance</a>.</p>
-                  <p class="note">A full page includes each variation of the page that is automatically presented by the page for various screen sizes (e.g. variations in a responsive Web page). Each of these variations needs to conform (or needs to have a conforming alternate version) in order for the entire page to conform.</p>
-                </section>
+				<!-- This section is quoted in Understanding Conformance. If updated, the update needs to be copied there. -->
+				<section id="cc2">
+					<h3>Celé webové stránky</h3>
+					<p><a>Súlad</a> (a úroveň súladu) sa vzťahuje vždy len na celú <a>webovú stránku (webové stránky)</a> a nedá sa dosiahnuť, ak je časť webovej stránky vylúčená.</p>
+					<p class="note">Z hľadiska súladu sa za adekvátnu alternatívu k určitej časti stránky považuje len taká, ktorá je priamo dostupná z danej stránky, napr. dlhý popis alebo alternatívna prezentácia videa.</p>
+					<p class="note">Autori webových stránok, ktoré nemôžu byť v súlade kvôli obsahu mimo vplyvu autora, môžu zvážiť použitie <a href="#conformance-partial">Vyhlásenia o čiastočnom súlade</a>.</p>
+				  <p class="note">Celá stránka zahŕňa každú variáciu stránky, ktorá je stránkou automaticky zobrazovaná pre rôzne veľkosti obrazovky (napr. variácie na responzívnej webovej stránke). Pre zhodu celej stránky musí každá z týchto variácií zaisťovať zhodu (alebo musí mať vyhovujúcu alternatívnu verziu, ktorá ju zaisťuje).</p>
+				</section>
 
-            	<!-- This section is quoted in Understanding Conformance. If updated, the update needs to be copied there. -->
-            	<section id="cc3">
-                    <h3>Complete processes</h3>
-                    <p>When a <a>Web page</a> is one of a series of Web pages presenting a <a>process</a> (i.e., a sequence of steps that need to be completed in order to accomplish an activity), all Web pages in the process conform at the specified level or better. (Conformance is not possible at a particular level if any page in the process does not conform at that level or better.)</p>
-                    <p class="example">An online store has a series of pages that are used to select and purchase products. All pages in the series from start to finish (checkout) conform in order for any page that is part of the process to conform.</p>
-                </section>
+				<!-- This section is quoted in Understanding Conformance. If updated, the update needs to be copied there. -->
+				<section id="cc3">
+					<h3>Úplné procesy</h3>
+					<p>Ak je <a>webová stránka</a> jednou z rady webových stránok, ktoré spolu predstavujú nejaký <a>proces</a> (t. j. postupnosť krokov, ktoré je potrebné dokončiť na vykonanie určitej činnosti), potom musia byť všetky webové stránky v rámci tohto procesu v súlade na určenej, prípadne vyššej úrovni (zhoda na určitej úrovni nie je možná, ak ktorákoľvek stránka v procese nie je na tejto alebo na vyššej úrovni).</p>
+					<p class="example">Internetový obchod má rad stránok, ktoré slúžia na výber a nákup produktov. Aby bola ľubovoľná stránka, ktorá je súčasťou tohto procesu v súlade, musia byť v súlade všetky stránky v rade od začiatku do konca (uhradenie).</p>
+				</section>
 
-            	<!-- This section is quoted in Understanding Conformance. If updated, the update needs to be copied there. -->
-            	<section id="cc4">
-                    <h3>Only Accessibility-Supported Ways of Using Technologies</h3>
+				<!-- This section is quoted in Understanding Conformance. If updated, the update needs to be copied there. -->
+				<section id="cc4">
+					<h3>Používanie technológií iba spôsobom, ktorý podporuje prístupnosť</h3>
 
-                    <p>Only <a>accessibility-supported</a> ways of using <a>technologies</a> are <a>relied upon</a> to satisfy the success criteria. Any information or functionality that is provided in a way that is not accessibility supported is also available in a way that is accessibility supported. (See <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#accessibility-support">Understanding accessibility support</a>.)</p>
+					<p>Pri spĺňaní kritérií úspešnosti sa dá <a>spoliehať</a> iba na také spôsoby používania <a>technológií</a>, ktoré sú <a>podporované z hľadiska prístupnosti</a>. Akákoľvek informácia alebo funkcia, ktoré je poskytovaná spôsobom, ktorý nepodporuje prístupnosť, sa poskytuje aj spôsobom, ktorý prístupnosť podporuje (pozri <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#accessibility-support" lang="en">Understanding Accessibility Support</a>, prekl. Ako chápať kritérium Podpora prístupnosti).</p>
 
-                </section>
+				</section>
 
-            	<!-- This section is quoted in Understanding Conformance. If updated, the update needs to be copied there. -->
-            	<section id="cc5">
-                    <h3>Non-Interference</h3>
-                    <p>If <a> technologies </a> are used in a way that is not <a>accessibility supported</a>, or if they are used in a non-conforming way, then they do not block the ability of users to access the rest of the page. In addition, the <a>Web page</a> as a whole continues to meet the conformance requirements under each of the following conditions:</p>
-                    <ol>
-                        <li>when any technology that is not <a>relied upon</a> is turned on in a user agent,</li>
-                        <li>when any technology that is not relied upon is turned off in a user agent, and</li>
-                        <li>when any technology that is not relied upon is not supported by a user agent</li>
-                    </ol>
-                    <p>In addition, the following success criteria apply to all content on the page, including content that is not otherwise relied upon to meet conformance, because failure to meet them could interfere with any use of the page:</p>
-                    <ul>
-                        <li><strong>1.4.2 - Audio Control</strong>,</li>
-                        <li><strong>2.1.2 - No Keyboard Trap</strong>,</li>
-                        <li><strong>2.3.1 - Three Flashes or Below Threshold</strong>, and</li>
-                        <li><strong>2.2.2 - Pause, Stop, Hide</strong>.</li>
-                    </ul>
-                    <p class="note">If a page cannot conform (for example, a conformance test page or an example page), it cannot be included in the scope of conformance or in a conformance claim.</p>
+				<!-- This section is quoted in Understanding Conformance. If updated, the update needs to be copied there. -->
+				<section id="cc5">
+					<h3>Súlad v interakcii prvkov</h3>
+					<p><a>Technológie</a> používané spôsobom, ktorý <a>nepodporuje prístupnosť</a>alebo nezaisťuje súlad, nebránia prístupu používateľov k zvyšku stránky. <a>Webová stránka</a> ako celok okrem toho naďalej spĺňa požiadavky na splnenie súladu pre každý z nasledovných prípadov:</p>
+					<ol>
+						<li>ak sa v nástroji používateľa aktivuje ktorákoľvek technológia, na ktorú <a>sa nespolieha</a>,</li>
+						<li>ak sa v nástroji používateľa deaktivuje ktorákoľvek technológia, na ktorú <a>sa nespolieha</a> a</li>
+						<li>ak nástroj používateľa nepodporuje ktorúkoľvek technológiu, na ktorú sa nespolieha.</li>
+					</ol>
+					<p>Celý obsah stránky, vrátane obsahu, na ktorý sa inak pre zaistenie súladu nespolieha, musí okrem toho spĺňať nasledujúce kritériá úspešnosti − v opačnom prípade by totiž mohlo dochádzať k znemožneniu akéhokoľvek používania stránky:</p>
+					<ul>
+						<li><strong>1.4.2 - Ovládanie zvuku</strong>,</li>
+						<li><strong>2.1.2 - Žiadna pasca na klávesy</strong>,</li>
+						<li><strong>2.3.1 - Tri bliknutia alebo podprahové záblesky</strong> a</li>
+						<li><strong>2.2.2 - Pauza, zastavenie, skrytie</strong>.</li>
+					</ul>
+					<p class="note">Ak stránku nie je možné dať do súladu (napríklad stránka pre testovanie súladu alebo vzorová stránka), nemôže byť zahrnutá do rozsahu súladu alebo do tvrdenia o zaistení súladu.</p>
 
-                	<p>For more information, including examples, see <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conformance-requirements">Understanding Conformance Requirements</a>.</p>
+					<p>Ďalšie informácie vrátane príkladov nájdete v časti <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conformance-requirements" lang="en">Understanding Conformance Requirements</a> (prekl. Ako chápať kritérium Požiadavky na dosiahnutie súladu).</p>
 
-                </section>
-            </section>
+				</section>
+			</section>
 
-            <section id="conformance-claims">
-                <h2>Conformance Claims (Optional) </h2>
-                <p>Conformance is defined only for <a>Web pages</a>. However, a conformance claim may be made to cover one page, a series of pages, or multiple related Web pages.</p>
+			<section id="conformance-claims">
+				<h2>Vyhlásenia o dosiahnutí súladu (nepovinné)</h2>
+				<p>Súlad je zadefinovaný iba pre <a>webové stránky</a>, avšak vyhlásenie o zaistení súladu sa môže vzťahovať na jednu stránku, rad stránok alebo niekoľko súvisiacich webových stránok.</p>
 
-                <section id="conformance-required">
-                    <h3>Required Components of a Conformance Claim</h3>
-                    <p>Conformance claims are <strong>not required</strong>. Authors can conform to WCAG 2.1 without making a claim. However, if a conformance claim is made, then the conformance claim <strong>must</strong> include the following information:</p>
-                    <ol>
-                        <li><strong>Date</strong> of the claim</li>
-                        <li><strong>Guidelines title, version and URI </strong> "Web Content Accessibility Guidelines 2.1 at <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a>"</li>
-                        <li><strong>Conformance level</strong> satisfied: (Level A, AA or AAA)</li>
-                        <li>
-                            <p><strong>A concise description of the Web pages</strong>, such as a list of URIs for which the claim is made, including whether subdomains are included in the claim.</p>
-                            <p class="note">The Web pages may be described by list or by an expression that describes all of the URIs included in the claim.</p>
-                            <p class="note">Web-based products that do not have a URI prior to installation on the customer's Web site may have a statement that the product would conform when installed.</p>
-                        </li>
-                        <li>A list of the <strong>
-                                <a>Web content technologies</a>
-                                <a>relied upon</a></strong>.</li>
-                    </ol>
-                    <p class="note">If a conformance logo is used, it would constitute a claim and must be accompanied by the required components of a conformance claim listed above.</p>
-                </section>
+				<section id="conformance-required">
+					<h3>Požadované prvky vyhlásenia o súlade</h3>
+					<p>vyhlásenie o súlade sa <strong>nevyžaduje</strong>. Autori môžu dosiahnuť súlad s WCAG 2.1 bez vyhlásenia o súlade, avšak ak ho vytvoria, <strong>musí</strong> obsahovať tieto informácie:</p>
+					<ol>
+						<li><strong>dátum</strong> vyhlásenia,</li>
+						<li><strong>názov pravidiel, verziu a URI</strong> t. j. „Pravidlá pre prístupnosť webového obsahu WCAG 2.1 na <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a>“,</li>
+						<li><strong>dosiahnutá úroveň súladu</strong>: (úroveň A, AA or AAA),</li>
+						<li>
+							<p><strong>stručný opis webových stránok</strong>, ako napríklad zoznam identifikátorov URI, pre ktoré sa vytvára vyhlásenie, vrátane informácie, či vyhlásenie zahŕňa aj subdomény.</p>
+							<p class="note">Webové stránky môžu byť popísané zoznamom alebo výrazom, ktorý opisuje všetky identifikátory URI zahrnuté vo vyhlásení.</p>
+							<p class="note">Webové produkty, ktoré nemajú pred inštaláciou na webovom sídle zákazníka URI, môžu mať vyhlásenie, že výrobok bude vyhovovať až po inštalácii.</p>
+						</li>
 
-                <section id="conformance-optional">
-                    <h3>Optional Components of a Conformance Claim </h3>
-                    <p>In addition to the required components of a conformance claim above, consider providing additional information to assist users. Recommended additional information includes:</p>
-                    <ul>
-                        <li>A list of success criteria beyond the level of conformance claimed that have been met. This information should be provided in a form that users can use, preferably machine-readable metadata.</li>
-                        <li>A list of the specific technologies that are " <em>used but not <a>relied upon</a></em>."</li>
-                        <li>A list of user agents, including assistive technologies that were used to test the content.</li>
-                        <li class="new">A list of specific accessibility characteristics of the content, provided in machine-readable metadata.</li>
-                        <li>Information about any additional steps taken that go beyond the success criteria to enhance accessibility.</li>
-                        <li>A machine-readable metadata version of the list of specific technologies that are <a>relied upon</a>.</li>
-                        <li>A machine-readable metadata version of the conformance claim.</li>
-                    </ul>
+						<li>Zoznam <strong> <a>webových technológií</a> na ktoré <a>sa spolieha</a></strong>.</li>
+					</ol>
+					<p class="note">Ak sa použije logo o súladu, predstavuje to vyhlásenie o súlade a musí byť doplnené požadovanými prvkami vyhlásenia o súlade uvedenými vyššie.</p>
+				</section>
 
-                	<p class="note">Refer to <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conformance-claims">Understanding Conformance Claims</a> for more information and example conformance claims.</p>
-                	<p class="note">Refer to <a href="https://www.w3.org/WAI/WCAG21/Understanding/understanding-metadata">Understanding Metadata</a> for more information about the use of metadata in conformance claims.</p>
+				<section id="conformance-optional">
+					<h3>Voliteľné prvky vyhlásenia o súlade</h3>
+					<p>Okrem požadovaných prvkov vyhlásenia o súlade uvedených vyššie je vhodné zvážiť poskytovanie dodatočných informácií, ktoré môžu pomôcť používateľom. Odporúčané doplňujúce informácie zahŕňajú:</p>
+					<ul>
+						<li>zoznam splnených kritérií úspešnosti nad rámec deklarovanej úrovne súladu. Táto informácia by mala byť prezentovaná vo forme, ktorú používatelia môžu použiť− najlepšie ako strojovo čitateľné metadáta,</li>
+						<li>zoznam technológií, ktoré sú <em>„použité, ale <a>nespolieha sa na ne</a></em>“,</li>
+						<li>zoznam nástrojov používateľa (vrátane asistenčných technológií), ktoré boli použité na testovanie webového obsahu,</li>
+						<li class="new">zoznam špecifických vlastností obsahu z hľadiska prístupnosti, poskytnutý v strojom čitateľnej podobe,</li>
+						<li>informácie o akýchkoľvek ďalších krokoch, ktoré boli uskutočnené s cieľom zlepšiť prístupnosť nad rámec kritérií úspešnosti,</li>
+						<li>strojom čitateľnú metadátovú verziu zoznamu konkrétnych technológií, na ktoré <a>sa spolieha</a>,</li>
+						<li>metadátovú verziu vyhlásenia o zhode v strojom čitateľnej podobe.</li>
+					</ul>
 
-                </section>
-            </section>
+					<p class="note">Ďalšie informácie a príklady vyhlásení o súlade najdete v časti <a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conformance-claims" lang="en">Understanding Conformance Claims</a> (prekl. Ako chápať vyhlásenia o súlade).</p>
+					<p class="note">Ďalšie informácie o používaní metadát vo vyhlásení o súlade nájdete v časti <a href="https://www.w3.org/WAI/WCAG21/Understanding/understanding-metadata">Understanding Metadata</a> (prekl. Ako chápať metadáta).</p>
 
-            <section id="conformance-partial">
-                <h2>Statement of Partial Conformance - Third Party Content</h2>
-                <p>Sometimes, Web pages are created that will later have additional content added to them. For example, an email program, a blog, an article that allows users to add comments, or applications supporting user-contributed content. Another example would be a page, such as a portal or news site, composed of content aggregated from multiple contributors, or sites that automatically insert content from other sources over time, such as when advertisements are inserted dynamically.</p>
-                <p>In these cases, it is not possible to know at the time of original posting what the uncontrolled content of the pages will be. It is important to note that the uncontrolled content can affect the accessibility of the controlled content as well. Two options are available:</p>
-                <ol>
-                    <li>
-                        <p>A determination of conformance can be made based on best knowledge. If a page of this type is monitored and repaired (non-conforming content is removed or brought into conformance) within two business days, then a determination or claim of conformance can be made since, except for errors in externally contributed content which are corrected or removed when encountered, the page conforms. No conformance claim can be made if it is not possible to monitor or correct non-conforming content;</p>
-                        <p><strong>OR</strong></p>
-                    </li>
-                    <li>
-                        <p>A "statement of partial conformance" may be made that the page does not conform, but could conform if certain parts were removed. The form of that statement would be, "This page does not conform, but would conform to WCAG 2.1 at level X if the following parts from uncontrolled sources were removed." In addition, the following would also be true of uncontrolled content that is described in the statement of partial conformance:</p>
-                        <ol>
-                            <li>It is not content that is under the author's control.</li>
-                            <li>It is described in a way that users can identify (e.g., they cannot be described as "all parts that we do not control" unless they are clearly marked as such.)</li>
-                        </ol>
-                    </li>
-                </ol>
-            </section>
+				</section>
+			</section>
 
-            <section id="conformance-partial-lang">
-                <h2>Statement of Partial Conformance - Language</h2>
-                <p>A "statement of partial conformance due to language" may be made when the page does not conform, but would conform if <a>accessibility support</a> existed for (all of) the language(s) used on the page. The form of that statement would be, "This page does not conform, but would conform to WCAG 2.1 at level X if accessibility support existed for the following language(s):"</p>
-            </section>
+			<section id="conformance-partial">
+				<h2>Vyhlásenie o čiastočnom súlade - obsah tretích strán</h2>
+				<p>Niektoré stránky sú vytvorené tak, že je k nim možné v budúcnosti pridávať ďalší obsah, ako napr. e-mailový program, blog či článok umožňujúci pridávanie komentárov alebo aplikácie, ktoré podporujú obsah pridávaný používateľom. Ďalším takým príkladom môžu byť rôzne informačné a spravodajské portály, kde obsah pochádza z mnohých zdrojov, alebo sídla, ktoré priebežne automaticky vkladajú obsah z rôznych zdrojov, ako napr. pri dynamickom vkladaní reklám.</p>
+				<p>V takýchto prípadoch nie je v čase vloženia pôvodného obsahu na stránku možné vedieť, aký bude nekontrolovaný obsah stránok. Je nutné podotknúť, že takýto nekontrolovaný obsah môže ovplyvniť aj prístupnosť kontrolovaného obsahu. Existujú dve možnosti:</p>
+				<ol>
+					<li>
+						<p>Vyhodnotenie súladu môže byť vytvorené na základe najlepších skúseností. Ak je stránka tohto typu monitorovaná a opravovaná do dvoch pracovných dní (obsah, ktorý nie je v súlade, je odstránený alebo upravený tak, aby bol v súlade), vyhodnotenie alebo tvrdenie o súlade je vytvoriteľné, keďže s výnimkou chýb v externe prispievanom obsahu,  ktorý je pri odhalení odstránený alebo opravený, je táto stránka v súlade. Tvrdenie o nesúlade je možné vytvoriť ak nie je možné obsah, ktorý nie je v súlade, monitorovať či opravovať.</p>
+						<p><strong>ALEBO</strong></p>
+					</li>
+					<li>
+						<p>Je možné urobiť „vyhlásenie o čiastočnom súlade“, v ktorom by stálo, že táto stránka nie je v súlade, ale mohla by byť, keby boli určité jej časti odstránené. Takéto vyhlásenie by malo nasledujúce podobu: „Táto stránka nie je v súlade, ale bola by v súlade s WCAG 2.1 na úrovni X, ak by boli nasledujúce časti z nekontrolovaných zdrojov odstránené.“ Navyše by malo o nekontrolovanom obsahu popísanom vo vyhlásení o čiastočnom súlade platiť aj nasledujúce:</p>
+						<ol>
+							<li>nie je to obsah, ktorý je pod kontrolou autora,</li>
+							<li>je opísaný spôsobom, ktorý je pre používateľov identifikovateľný (t. j. nie je ich možno opísať ako „všetky časti, nad ktorými nemáme kontrolu“, ak neboli tieto časti jasne označené).</li>
+						</ol>
+					</li>
+				</ol>
+			</section>
 
-        </section>
-        <section id="glossary">
-            <h1>Glossary</h1>
-            <dl id="terms">
+			<section id="conformance-partial-lang">
+				<h2>Vyhlásenie o čiastočnom súlade - jazyk</h2>
+				<p>„Vyhlásenie o čiastočnom súlade v dôsledku jazyka“ je možné urobiť, ak stránka nie je v súlade, ale bola by v súlade, ak by existovala <a>podpora prístupnosti</a> pre (všetky) jazyk(-y) použitý(-é) na stránke. Podoba takéhoto vyhlásenia by bola: „Táto stránka nie je v súlade, avšak bola by v súlade s pravidlami WCAG 2.1 na úrovni X, ak by existovala podpora prístupnosti pre nasledujúci(-e) jazyk(-y):“</p>
+			</section>
 
-                <dt data-include="terms/20/abbreviation.html" data-include-replace="true"></dt>
-            	
-                <dt data-include="terms/20/accessibility-supported.html" data-include-replace="true"></dt>
+		</section>
+		<section id="glossary">
+			<h1>Glossary</h1>
+			<dl id="terms">
 
-                <dt data-include="terms/20/alternative-for-time-based-media.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/20/ambiguous-to-users-in-general.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/20/ascii-art.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/20/assistive-technology.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/20/audio.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/20/audio-description.html" data-include-replace="true"></dt>
-                
-                <dt data-include="terms/20/audio-only.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/20/blinking.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/20/blocks-of-text.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/20/captcha.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/20/captions.html" data-include-replace="true"></dt>
-                
-                <dt data-include="terms/20/changes-of-context.html" data-include-replace="true"></dt>
-              
-                <dt data-include="terms/20/conformance.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/20/conforming-alternate-version.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/20/content.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/20/context-sensitive-help.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/20/contrast-ratio.html" data-include-replace="true"></dt>
-            	
-                <dt data-include="terms/20/correct-reading-sequence.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/21/css-pixel.html" data-include-replace="true"></dt>
-
-                <dt data-include="terms/21/down-event.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/abbreviation.html" data-include-replace="true"></dt>
 				
-                <dt data-include="terms/20/emergency.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/accessibility-supported.html" data-include-replace="true"></dt>
 
-              	<dt data-include="terms/20/essential.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/alternative-for-time-based-media.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/extended-audio-description.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/ambiguous-to-users-in-general.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/flash.html" data-include-replace="true"></dt>
-            	
-            	<dt data-include="terms/20/functionality.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/ascii-art.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/general-flash-and-red-flash-thresholds.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/assistive-technology.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/human-language.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/audio.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/idiom.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/audio-description.html" data-include-replace="true"></dt>
+				
+				<dt data-include="terms/20/audio-only.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/image-of-text.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/blinking.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/informative.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/blocks-of-text.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/input-error.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/captcha.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/jargon.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/captions.html" data-include-replace="true"></dt>
+				
+				<dt data-include="terms/20/changes-of-context.html" data-include-replace="true"></dt>
+			  
+				<dt data-include="terms/20/conformance.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/keyboard-interface.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/conforming-alternate-version.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/21/keyboard-shortcut.html" data-include-replace="true"></dt>
-                
-                <dt data-include="terms/20/label.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/content.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/large-scale.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/context-sensitive-help.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/legal-commitments.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/contrast-ratio.html" data-include-replace="true"></dt>
+				
+				<dt data-include="terms/20/correct-reading-sequence.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/link-purpose.html" data-include-replace="true"></dt>
+				<dt data-include="terms/21/css-pixel.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/live.html" data-include-replace="true"></dt>
+				<dt data-include="terms/21/down-event.html" data-include-replace="true"></dt>
+				
+				<dt data-include="terms/20/emergency.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/lower-secondary-education-level.html" data-include-replace="true"></dt>
+			  	<dt data-include="terms/20/essential.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/mechanism.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/extended-audio-description.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/media-alternative-for-text.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/flash.html" data-include-replace="true"></dt>
+				
+				<dt data-include="terms/20/functionality.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/21/motion-animation.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/general-flash-and-red-flash-thresholds.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/name.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/human-language.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/navigated-sequentially.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/idiom.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/non-text-content.html" data-include-replace="true"></dt>
-                
-                <dt data-include="terms/20/normative.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/image-of-text.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/on-a-full-screen-window.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/informative.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/paused.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/input-error.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/21/pointer-input.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/jargon.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/prerecorded.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/keyboard-interface.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/presentation.html" data-include-replace="true"></dt>
+				<dt data-include="terms/21/keyboard-shortcut.html" data-include-replace="true"></dt>
+				
+				<dt data-include="terms/20/label.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/primary-education-level.html" data-include-replace="true"></dt>
-                
-                <dt data-include="terms/20/process.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/large-scale.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/programmatically-determined.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/legal-commitments.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/programmatically-determined-link-context.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/link-purpose.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/programmatically-set.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/live.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/pure-decoration.html" data-include-replace="true"></dt>
-                
-                <dt data-include="terms/20/real-time-event.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/lower-secondary-education-level.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/21/region.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/mechanism.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/relationships.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/media-alternative-for-text.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/relative-luminance.html" data-include-replace="true"></dt>
+				<dt data-include="terms/21/motion-animation.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/relied-upon.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/name.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/role.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/navigated-sequentially.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/same-functionality.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/non-text-content.html" data-include-replace="true"></dt>
+				
+				<dt data-include="terms/20/normative.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/same-relative-order.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/on-a-full-screen-window.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/satisfies-a-success-criterion.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/paused.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/section.html" data-include-replace="true"></dt>
+				<dt data-include="terms/21/pointer-input.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/21/set-of-web-pages.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/prerecorded.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/sign-language.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/presentation.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/sign-language-interpretation.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/primary-education-level.html" data-include-replace="true"></dt>
+				
+				<dt data-include="terms/20/process.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/21/single-pointer.html" data-include-replace="true"></dt>
-                
-                <dt data-include="terms/20/specific-sensory-experience.html" data-include-replace="true"></dt>
-                
-                <dt data-include="terms/21/state.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/programmatically-determined.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/21/status-message.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/programmatically-determined-link-context.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/structure.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/programmatically-set.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/21/style-property.html" data-include-replace="true"></dt>
-              
-                <dt data-include="terms/20/supplemental-content.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/pure-decoration.html" data-include-replace="true"></dt>
+				
+				<dt data-include="terms/20/real-time-event.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/synchronized-media.html" data-include-replace="true"></dt>
+				<dt data-include="terms/21/region.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/21/target.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/relationships.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/technology.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/relative-luminance.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/text.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/relied-upon.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/text-alternative.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/role.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/21/up-event.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/same-functionality.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/used-in-an-unusual-or-restricted-way.html" data-include-replace="true"></dt>
-                
-                <dt data-include="terms/20/user-agent.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/same-relative-order.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/user-controllable.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/satisfies-a-success-criterion.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/user-interface-component.html" data-include-replace="true"></dt>
-            	
-            	<dt data-include="terms/21/user-inactivity.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/section.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/video.html" data-include-replace="true"></dt>
+				<dt data-include="terms/21/set-of-web-pages.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/video-only.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/sign-language.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/viewport.html" data-include-replace="true"></dt>
+				<dt data-include="terms/20/sign-language-interpretation.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/visually-customized.html" data-include-replace="true"></dt>
+				<dt data-include="terms/21/single-pointer.html" data-include-replace="true"></dt>
+				
+				<dt data-include="terms/20/specific-sensory-experience.html" data-include-replace="true"></dt>
+				
+				<dt data-include="terms/21/state.html" data-include-replace="true"></dt>
 
-                <dt data-include="terms/20/web-page.html" data-include-replace="true"></dt>
+				<dt data-include="terms/21/status-message.html" data-include-replace="true"></dt>
 
-            </dl>
-        </section>
-    	    	
-      <div data-include="input-purposes.html" data-include-replace="true"></div>
-      
-    	<section class="appendix" id="changelog">
-    		<h2>Change Log</h2>
-    		<p>This section shows changes proposed for WCAG 2.1 since its publication as a W3C Recommendation. These changes are also recorded as <a href=" This section ">errata</a>.</p>
-    		<p>The full <a href="https://github.com/w3c/wcag/commits/master/guidelines">commit history to WCAG 2.1</a> is available.</p>
-    		<p><em>No changes have been made to date.</em></p>
-    	</section>
-    	<section class="appendix informative section" id="acknowledgements">
-    		<h3>Acknowledgments</h3>
-    		<p>Additional information about participation in the Accessibility Guidelines Working Group (AG WG) can be found on the <a href="https://www.w3.org/WAI/GL/">Working Group home page</a>.</p>
-    		<div data-include="../acknowledgements/ag-wg-active.html" data-include-replace="true"></div>
-    		<div data-include="../acknowledgements/ag-contributors.html" data-include-replace="true"></div>
-    		<div data-include="../acknowledgements/funders.html" data-include-replace="true"></div>
-    	</section>
-    </body>
+				<dt data-include="terms/20/structure.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/21/style-property.html" data-include-replace="true"></dt>
+			  
+				<dt data-include="terms/20/supplemental-content.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/20/synchronized-media.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/21/target.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/20/technology.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/20/text.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/20/text-alternative.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/21/up-event.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/20/used-in-an-unusual-or-restricted-way.html" data-include-replace="true"></dt>
+				
+				<dt data-include="terms/20/user-agent.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/20/user-controllable.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/20/user-interface-component.html" data-include-replace="true"></dt>
+				
+				<dt data-include="terms/21/user-inactivity.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/20/video.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/20/video-only.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/20/viewport.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/20/visually-customized.html" data-include-replace="true"></dt>
+
+				<dt data-include="terms/20/web-page.html" data-include-replace="true"></dt>
+
+			</dl>
+		</section>
+				
+	  <div data-include="input-purposes.html" data-include-replace="true"></div>
+	  
+		<section class="appendix" id="changelog">
+			<h2>Change log</h2>
+			<p>This section shows changes proposed for WCAG 2.1 since its publication as a W3C Recommendation. These changes are also recorded as <a href=" This section ">errata</a>.</p>
+			<p>The full <a href="https://github.com/w3c/wcag/commits/master/guidelines">commit history to WCAG 2.1</a> is available.</p>
+			<p><em>No changes have been made to date.</em></p>
+		</section>
+		<section class="appendix informative section" id="acknowledgements">
+			<h3>Poďakovanie</h3>
+			<p>Doplnkové informácie o participácii v pracovnej skupine pre pravidlá prístupnosti (angl. <span lang="en">Accessibility Guidelines Working Group (AG WG)</span>) sú dostupné na <a href="https://www.w3.org/WAI/GL/">domovskej stránke pracovnej skupiny</a>.</p>
+			<div data-include="../acknowledgements/ag-wg-active.html" data-include-replace="true"></div>
+			<div data-include="../acknowledgements/ag-contributors.html" data-include-replace="true"></div>
+			<div data-include="../acknowledgements/funders.html" data-include-replace="true"></div>
+		</section>
+	</body>
 </html>

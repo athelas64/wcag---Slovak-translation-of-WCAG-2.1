@@ -1,63 +1,36 @@
-<dt><dfn>general flash and red flash thresholds</dfn></dt>
+<dt><dfn data-lt="prahovými hodnotami pre všeobecný záblesk a červený záblesk">prahové hodnoty pre všeobecný záblesk a červený záblesk</dfn></dt>
 <dd>
-   
-   <p>a <a>flash</a> or rapidly changing image sequence is below the threshold (i.e., content <strong>passes</strong>) if any of the following are true:
-   </p>
-   
-   <ol>
-      
-      <li>there are no more than three <strong>general flashes</strong> and / or no more than three <strong>red flashes</strong> within any one-second period; or
-      </li>
-      
-      <li>the combined area of flashes occurring concurrently occupies no more than a total
-         of .006 steradians within any 10 degree visual field on the screen (25% of any 10
-         degree visual field on the screen) at typical viewing distance
-      </li>
-      
-   </ol>
-   
-   <p>where:</p>
-   
-   <ul>
-      
-      <li>A <strong>general flash</strong> is defined as a pair of opposing changes in <a>relative luminance</a> of 10% or more of the maximum relative luminance where the relative luminance of
-         the darker image is below 0.80; and where "a pair of opposing changes" is an increase
-         followed by a decrease, or a decrease followed by an increase, and
-      </li>
-      
-      <li>A <strong>red flash</strong> is defined as any pair of opposing transitions involving a saturated red
-      </li>
-      
-   </ul>
-   
-   <p><em>Exception:</em> Flashing that is a fine, balanced, pattern such as white noise or an alternating
-      checkerboard pattern with "squares" smaller than 0.1 degree (of visual field at typical
-      viewing distance) on a side does not violate the thresholds.
-   </p>
-   
-   <p class="note">For general software or Web content, using a 341 x 256 pixel rectangle anywhere on
-      the displayed screen area when the content is viewed at 1024 x 768 pixels will provide
-      a good estimate of a 10 degree visual field for standard screen sizes and viewing
-      distances (e.g., 15-17 inch screen at 22-26 inches). (Higher resolutions displays
-      showing the same rendering of the content yield smaller and safer images so it is
-      lower resolutions that are used to define the thresholds.)
-   </p>
-   
-   <p class="note">A transition is the change in relative luminance (or relative luminance/color for
-      red flashing) between adjacent peaks and valleys in a plot of relative luminance (or
-      relative luminance/color for red flashing) measurement against time. A flash consists
-      of two opposing transitions.
-   </p>
-   
-   <p class="note">The current working definition in the field for <strong>"pair of opposing transitions involving a saturated red"</strong> is where, for either or both states involved in each transition, R/(R+ G + B) &gt;=
-      0.8, and the change in the value of (R-G-B)x320 is &gt; 20 (negative values of (R-G-B)x320
-      are set to zero) for both transitions. R, G, B values range from 0-1 as specified
-      in “relative luminance” definition. [[HARDING-BINNIE]]
-   </p>
-   
-   <p class="note">Tools are available that will carry out analysis from video screen capture. However,
-      no tool is necessary to evaluate for this condition if flashing is less than or equal
-      to 3 flashes in any one second. Content automatically passes (see #1 and #2 above).
-   </p>
-   
+	
+	<p>a <a>záblesk</a> alebo rýchlo sa meniaca sekvencia obrázkov je pod prahom (t.j. obsah <strong>spĺňa</strong> toto kritérium), ak platí niektorá z nasledujúcich podmienok:</p>
+	
+	<ol>
+		
+		<li>v priebehu jednej sekundy nenastanú viac ako tri<strong>všeobecné záblesky</strong> a / alebo viac ako tri <strong>červené záblesky</strong> alebo
+		</li>
+
+		<li>kombinovaná oblasť zábleskov, ktoré sa dejú súbežne, zaberá v rámci 10-stupňového vizuálneho poľa na obrazovke (25 % akéhokoľvek 10-stupňového vizuálneho poľa na obrazovke) v typickej vzdialenosti pozorovania najviac 0,006 steradiánov,</li>
+		
+	</ol>
+	
+	<p>pričom:</p>
+	
+	<ul>
+		
+		<li><strong>všeobecný záblesk</strong> je definovaný ako dvojica protichodných zmien v <a>relatívnom jase</a> o 10 % alebo viac z maximálneho relatívneho jasu, zatiaľ čo je relatívny jas tmavšieho obrazu nižší ako 0,80 a „dvojica protichodných zmien“ predstavuje nárast nasledovaný poklesom alebo pokles nasledovaný nárastom, a</li>
+		
+		<li><strong>červený záblesk</strong> je definovaný ako akákoľvek dvojica protichodných zmien zahŕňajúca sýtu červenú.</li>
+		
+	</ul>
+	
+	<p><em>Výnimka:</em> záblesk, ktorý má jemný a vyvážený vzor, ako napr. biely šum alebo striedajúci sa šachovnicový vzor so „štvorčekmi“ menšími ako 0,1 stupňa (zorného poľa pri bežnej pozorovacej vzdialenosti) zo strany neporušuje prahové hodnoty.</p>
+	
+	<p class="note">Dobrý odhad 10-stupňového zorného poľa pre štandardnú veľkosť displeja a vzdialenosti zobrazenia (napr. 15-17 palcový displej pri vzdialenosti 56 až 66 centimetrov) predstavuje pri všeobecnom softvéri alebo webovom obsahu použitie obdĺžnika o veľkosti 341 x 256 pixelov na ľubovoľnom mieste na zobrazovacom displeji, ak sa obsah prezerá pri veľkosti zobrazenia 1024 x 768 pixelov. (Vyššie rozlíšenie displeja zobrazujúce rovnaké vykresľovanie obsahu prináša menšie a bezpečnejšie obrazy, takže sa na definovanie prahových hodnôt používajú nižšie rozlíšenia).</p>
+	
+	<p class="note">Zmena je zmena relatívneho jasu (alebo relatívneho jasu/farby pre červený záblesk) medzi susednými vrcholmi a najnižšími bodmi v grafe relatívneho jasu (alebo relatívneho jasu/farby pre červený záblesk) v závislosti od času. Záblesk pozostáva z dvoch protichodných zmien.</p>
+	
+	<p class="note">Súčasná pracovná definícia v oblasti <strong>„dvojica protichodných zmien zahŕňajúcich sýtu červenú“</strong> nastáva v prípade, kde je pre jeden alebo obidva stavy zahrnuté do každej zmeny R / (R + G + B) &gt;= 0,8 a zmena hodnoty (RGB) x 320 je &gt; 20 (záporné hodnoty (RGB) x 320 sú nastavené na nulu) pre obe zmeny. Hodnoty R, G a B sa pohybujú v rozmedzí od 0 do 1 tak, ako je to uvedené v definícii „relatívneho jasu“. [[HARDING-BINNIE]]
+	</p>
+	
+	<p class="note">Existujú nástroje, ktoré umožňujú vykonanie analýzy zo snímku obrazovky videa. Na vyhodnotenie tejto podmienky však nie je potrebný žiadny nástroj, ak počas jednej sekundy nastane 3 alebo menej zábleskov. Obsah je automaticky spĺňa kritérium (pozri #1 a #2 vyššie).</p>
+	
 </dd>

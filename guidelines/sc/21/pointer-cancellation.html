@@ -1,28 +1,28 @@
 <section class="sc">
-   					
-   <h4>Pointer Cancellation</h4>
-   					
-   <p class="conformance-level">A</p>
-   					
-   <p>For <a>functionality</a> that can be operated using a <a>single pointer</a>, at least one of the following is true:</p>
-   					
-   <dl>
-   
-   <dt>No Down-Event</dt>
-     <dd>The <a>down-event</a> of the pointer is not used to execute any part of the function;</dd>
-      						
-   <dt>Abort or Undo</dt>
-     <dd>Completion of the function is on the <a>up-event</a>, and a <a>mechanism</a> is available to abort the function before completion or to undo the function after completion;</dd>
-      						
-   <dt>Up Reversal</dt>
-     <dd>The up-event reverses any outcome of the preceding down-event;</dd>
-      						
-   <dt>Essential</dt>
-     <dd>Completing the function on the down-event is <a>essential</a>.</dd>
-      						
-   </dl>
-   <p class="note">Functions that emulate a keyboard or numeric keypad key press are considered essential.</p>
-   					
-  <p class="note">This requirement applies to web content that interprets pointer actions (i.e. this does not apply to actions that are required to operate the user agent or assistive technology).</p>
+
+	<h4>Zrušenie ukazovateľa</h4>
+
+	<p class="conformance-level">A</p>
+
+	<p>Pre <a>funkcionalitu</a> ktorú je možné ovládať pomocou <a>jedného ukazovateľa</a>, platí aspoň jedna z nasledujúcich podmienok:</p>
+
+	<dl>
+	
+	<dt>Žiadna udalosť po stlačení</dt>
+		<dd>Na vykonanie akejkoľvek časti funkcie sa nepožíva žiadna <a>udalosť po stlačení</a> ukazovateľa.</dd>
+
+	<dt>Možnosť zrušiť alebo vrátiť späť</dt>
+		<dd>Funkcia je dokončená v <a>udalosti po uvoľnení stlačenia</a>, a k dispozícii je <a>mechanizmus</a> pre prerušenie funkcie pred dokončením alebo pre zrušenie funkcie po dokončení.</dd>
+
+	<dt>Zvrátenie uvoľnením stlačenia</dt>
+		<dd>Udalosť po uvoľnení stlačenia zvráti akýkoľvek výsledok predchádzajúcej udalosti po stlačení.</dd>
+
+	<dt>Nevyhnutný</dt>
+		<dd>Dokončenie funkcie v udalosti po stlačení je <a>nevyhnutné</a>.</dd>
+
+	</dl>
+	<p class="note">Funkcie, ktoré napodobňujú fungovanie klávesnice alebo číselnej klávesnice, sa považujú za nevyhnutné.</p>
+
+	<p class="note">Táto požiadavka sa vzťahuje na webový obsah, ktorý interpretuje úkony ukazovateľa (netýka sa úkonov, ktoré sú potrebné na ovládanie prístupových nástrojov alebo asistenčných technológií).</p>
 	
 </section>

@@ -1,61 +1,50 @@
-<dt><dfn>relative luminance</dfn></dt>
+<dt><dfn data-lt="relatívnom jase">relatívny jas</dfn></dt>
 <dd>
-   
-   <p>the relative brightness of any point in a colorspace, normalized to 0 for darkest
-      black and 1 for lightest white
-   </p>
-   
+	
+	<p>relatívny jas akéhokoľvek bodu v konkrétnom rozložení farieb, normalizovaný na 0 pre najtmavšiu čiernu a 1 pre najsvetlejšiu bielu</p>
+	
   <div class="note">
-   <p>For the sRGB colorspace, the relative luminance of a color is defined as L = 0.2126
-      * <strong>R</strong> + 0.7152 * <strong>G</strong> + 0.0722 * <strong>B</strong> where <strong>R</strong>, <strong>G</strong> and <strong>B</strong> are defined as:
-   </p>
-   
-   <ul>
-      
-      <li>if RsRGB &lt;= 0.03928 then <strong>R</strong> = RsRGB/12.92 else <strong>R</strong> = ((RsRGB+0.055)/1.055) ^ 2.4
-      </li>
-      
-      <li>if GsRGB &lt;= 0.03928 then <strong>G</strong> = GsRGB/12.92 else <strong>G</strong> = ((GsRGB+0.055)/1.055) ^ 2.4
-      </li>
-      
-      <li>if BsRGB &lt;= 0.03928 then <strong>B</strong> = BsRGB/12.92 else <strong>B</strong> = ((BsRGB+0.055)/1.055) ^ 2.4
-      </li>
-      
-   </ul>
-   
-   <p>and RsRGB, GsRGB, and BsRGB are defined as:</p>
-   
-   <ul>
-      
-      <li>RsRGB = R8bit/255</li>
-      
-      <li>GsRGB = G8bit/255</li>
-      
-      <li>BsRGB = B8bit/255</li>
-      
-   </ul>
-   
-   <p>The "^" character is the exponentiation operator. (Formula taken from [[sRGB]] and
-      [[IEC-4WD]]).
-   </p>
+	<p>Pre farebný priestor sRGB je relatívny jas farby definovaný ako L = 0,2126
+		* <strong>R</strong> + 0,7152 * <strong>G</strong> + 0,0722 * <strong>B</strong> kde <strong>R</strong>, <strong>G</strong> and <strong>B</strong> sú definované ako:
+	</p>
+	
+	<ul>
+		
+		<li>ak RsRGB &lt;= 0,03928 potom <strong>R</strong> = RsRGB/12,92 inak <strong>R</strong> = ((RsRGB+0,055)/1,055) ^ 2,4
+		</li>
+		
+		<li>ak GsRGB &lt;= 0,03928 potom <strong>G</strong> = GsRGB/12,92 inak <strong>G</strong> = ((GsRGB+0,055)/1,055) ^ 2,4
+		</li>
+		
+		<li>ak BsRGB &lt;= 0,03928 potom <strong>B</strong> = BsRGB/12,92 inak <strong>B</strong> = ((BsRGB+0,055)/1,055) ^ 2,4
+		</li>
+		
+	</ul>
+	
+	<p>a RsRGB, GsRGB, a BsRGB sú definované ako:</p>
+	
+	<ul>
+		
+		<li>RsRGB = R8bit/255</li>
+		
+		<li>GsRGB = G8bit/255</li>
+		
+		<li>BsRGB = B8bit/255</li>
+		
+	</ul>
+	
+	<p>Znak „^“ je znakom umocnenia (Vzorec je prevzatý z [[sRGB]] a
+		[[IEC-4WD]]).</p>
 
   </div>
   
-   <p class="note">Almost all systems used today to view Web content assume sRGB encoding. Unless it
-      is known that another color space will be used to process and display the content,
-      authors should evaluate using sRGB colorspace. If using other color spaces, see <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast">Understanding Success Criterion 1.4.3</a>.
-   </p>
-   
-   <p class="note">If dithering occurs after delivery, then the source color value is used. For colors
-      that are dithered at the source, the average values of the colors that are dithered
-      should be used (average R, average G, and average B).
-   </p>
-   
-   <p class="note">Tools are available that automatically do the calculations when testing contrast and
-      flash.
-   </p>
-   
-   <p class="note">A <a href="relative-luminance.xml">MathML version of the relative luminance definition</a> is available.
-   </p>
-   
+	<p class="note">Takmer všetky systémy, ktoré sa v súčasnosti používajú na prezeranie webového obsahu, predpokladajú kódovanie sRGB. Ak nie je známe, že sa na spracovanie a zobrazenie obsahu použije iný farebný priestor, autori by mali hodnotiť pri použití farebného priestoru sRGB. Ak sa používa iný farebný priestor, pozri <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast" lang="en">Understanding Success Criterion 1.4.3</a> (prekl. Ako chápať kritérium úspešnosti 1.4.3.).</p>
+	
+	<p class="note">Ak po poskytnutí nastane rozklad farby (dithering), použije sa hodnota zdrojovej farby. Pre farby, ktorých rozklad nastal už v zdroji, by mali byť použité priemerné hodnoty rozložených farieb (priemer R, priemer G a priemer B).</p>
+	
+	<p class="note">Pri testovaní kontrastu a záblesku sú k dispozícii nástroje, ktoré vykonávajú výpočty automaticky.</p>
+	
+	<p class="note">K dispozícii je <a href="relative-luminance.xml">MathML verzia definície relatívneho jasu</a> (odkaz je v angličtine).
+	</p>
+	
 </dd>
