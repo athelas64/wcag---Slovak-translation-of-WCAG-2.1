@@ -5,7 +5,8 @@
 
 		<title>Pravidlá pre prístupnosť webového obsahu (WCAG) 2.1</title>
 
-		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
+		<!-- <script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script> -->
+		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
 		<script src="../script/wcag.js" class="remove"></script>
 		<script src="respec-config.js" class="remove"></script>
 		<script src="../biblio.js" class="remove"></script>
@@ -97,23 +98,23 @@
 					<p>WCAG 2.1 rozširuje WCAG 2.0 o nové kritériá úspešnosti, definície na ich podporu, pravidlá pre organizovanie doplnkov a niekoľko doplnení v časti o súlade. Tento prístup vo forme pridávania napomáha jednoznačnosti, že sídla, ktoré spĺňajú WCAG 2.1, spĺňajú tiež WCAG 2.0, čím sa zároveň spĺňajú povinnosti zachovania súladu špecificky voči WCAG 2.0. Pracovná skupina pre pravidlá prístupnosti odporúča, aby si sídla osvojili ako svoj nový cieľ dodržiavania WCAG 2.1, aj keď formálne povinnosti uvádzajú WCAG 2.0, čím sa zabezpečí lepšia prístupnosť a predvídanie budúcich zmien politík.</p>
 					<p>Nasledujúce kritériá úspešnosti vo WCAG 2.1 sú nové:</p>
 					<ul>
-						<li>1.3.4 <a href="#orientation">Orientácia</a> (AA)</li>
-						<li>1.3.5 <a href="#identify-input-purpose">Identifikácia účelu vstupu</a> (AA)</li>
-						<li>1.3.6 <a href="#identify-purpose">Identifikácia účelu</a> (AAA)</li>
-						<li>1.4.10 <a href="#reflow">Zmena usporiadania obsahu (reflow)</a> (AA)</li>
-						<li>1.4.11 <a href="#non-text-contrast">Kontrast netextových prvkov</a> (AA)</li>
-						<li>1.4.12 <a href="#text-spacing">Rozloženie textu</a> (AA)</li>
-						<li>1.4.13 <a href="#content-on-hover-or-focus">Obsah pri zameraní myšou alebo kurzorom</a> (AA)</li>
-						<li>2.1.4 <a href="#character-key-shortcuts">Jednoznakové klávesové skratky</a> (A)</li>
-						<li>2.2.6 <a href="#timeouts">Časové limity</a> (AAA)</li>
-						<li>2.3.3 <a href="#animation-from-interactions">Animácia z interakcií</a> (AAA)</li>
-						<li>2.5.1 <a href="#pointer-gestures">Pohyby ukazovateľa</a> (A)</li>
-						<li>2.5.2 <a href="#pointer-cancellation">Zrušenie ukazovateľa</a> (A)</li>
-						<li>2.5.3 <a href="#label-in-name">Popis v názve</a> (A)</li>
-						<li>2.5.4 <a href="#motion-actuation">Aktivácia pohybom</a> (A)</li>
-						<li>2.5.5 <a href="#target-size">Veľkosť cieľa</a> (AAA)</li>
-						<li>2.5.6 <a href="#concurrent-input-mechanisms">Súbežné mechanizmy pre zadávanie vstupu</a> (AAA)</li>
-						<li>4.1.3 <a href="#status-messages">Stavové správy</a> (AA)</li>
+						<li>1.3.4 <a href="#orientacia">Orientácia</a> (AA)</li>
+						<li>1.3.5 <a href="#identifikacia-ucelu-vstupu">Identifikácia účelu vstupu</a> (AA)</li>
+						<li>1.3.6 <a href="#identifikacia-ucelu">Identifikácia účelu</a> (AAA)</li>
+						<li>1.4.10 <a href="#zmena-usporiadania-obsahu-reflow">Zmena usporiadania obsahu (reflow)</a> (AA)</li>
+						<li>1.4.11 <a href="#kontrast-netextovych-prvkov">Kontrast netextových prvkov</a> (AA)</li>
+						<li>1.4.12 <a href="#rozlozenie-textu">Rozloženie textu</a> (AA)</li>
+						<li>1.4.13 <a href="#obsah-pri-zamerani-mysou-alebo-klavesnicou">Obsah pri zameraní myšou alebo kurzorom</a> (AA)</li>
+						<li>2.1.4 <a href="#jednoznakove-klavesove-skratky">Jednoznakové klávesové skratky</a> (A)</li>
+						<li>2.2.6 <a href="#casove-limity">Časové limity</a> (AAA)</li>
+						<li>2.3.3 <a href="#animacia-vyvolana-interakciou">Animácia z interakcií</a> (AAA)</li>
+						<li>2.5.1 <a href="#pohyby-ukazovatela">Pohyby ukazovateľa</a> (A)</li>
+						<li>2.5.2 <a href="#zrusenie-ukazovatela">Zrušenie ukazovateľa</a> (A)</li>
+						<li>2.5.3 <a href="#popis-v-nazve">Popis v názve</a> (A)</li>
+						<li>2.5.4 <a href="#aktivacia-pohybom">Aktivácia pohybom</a> (A)</li>
+						<li>2.5.5 <a href="#velkost-ciela">Veľkosť cieľa</a> (AAA)</li>
+						<li>2.5.6 <a href="#subezne-mechanizmy-pre-zadavanie-vstupu">Súbežné mechanizmy pre zadávanie vstupu</a> (AAA)</li>
+						<li>4.1.3 <a href="#stavove-spravy">Stavové správy</a> (AA)</li>
 					</ul>
 					<p>Mnohé z týchto kritérií úspešnosti odkazujú na nové pojmy, ktoré boli pridané do Slovníka pojmov, pričom sú súčasťou normatívnych požiadaviek kritérií úspešnosti.</p>
 					<p>V časti o súlade bola do <a href="#cc2">celých stránok</a> pridaná tretia poznámka o variantoch webových stránok a do <a href="#conformance-optional">voliteľných prvkov vyhlásenia o súlade</a> bola pridaná možnosť pre programovo čitateľné metaúdaje.</p>
@@ -124,7 +125,7 @@
 				</section>
 				<section>
 					<h4>Súlad s WCAG 2.1</h4>
-					<p>WCAG 2.1 využíva rovnaký model zachovania súladu ako WCAG 2.0 s niekoľkými doplnkami, ktoré sú opísané v časti <a href="#conformance">Súlad s pravidlami</a>. Zámerom je, aby sídla vyhovujúce WCAG 2.1 boli tiež v súlade s WCAG 2.0, čo znamená, že musia spĺňať požiadavky akejkoľvek politiky, ktorá odkazuje na WCAG 2.0, a zároveň lepšie uspokojujú potreby používateľov na súčasnom webe.</p>
+					<p>WCAG 2.1 využíva rovnaký model zachovania súladu ako WCAG 2.0 s niekoľkými doplnkami, ktoré sú opísané v časti <a href="#sulad-s-pravidlami">Súlad s pravidlami</a>. Zámerom je, aby sídla vyhovujúce WCAG 2.1 boli tiež v súlade s WCAG 2.0, čo znamená, že musia spĺňať požiadavky akejkoľvek politiky, ktorá odkazuje na WCAG 2.0, a zároveň lepšie uspokojujú potreby používateľov na súčasnom webe.</p>
 				</section>
 			</section>
 			<section>
