@@ -27,22 +27,22 @@ function addTextSemantics() {
 	// put level before and parentheses around the conformance level marker
 	document.querySelectorAll('p.conformance-level').forEach(function(node){
 		var level = node.textContent;
-		node.textContent = "(Level " + level + ")";
+		node.textContent = "(Úroveň " + level + ")";
 	})
 	// put principle in principle headings
 	document.querySelectorAll('section.sc h2 bdi.secno').forEach(function(node){
 		var num = node.textContent;
-		node.textContent = "Principle " + num;
+		node.textContent = "Princíp " + num;
 	})
 	// put guideline in GL headings
 	document.querySelectorAll('section.guideline h3 bdi.secno').forEach(function(node){
 		var num = node.textContent;
-		node.textContent = "Guideline " + num;
+		node.textContent = "Pravidlo " + num;
 	})
 	// put success criterion in SC headings
 	document.querySelectorAll('section.sc h4 bdi.secno').forEach(function(node){
 		var num = node.textContent;
-		node.textContent = "Success Criterion " + num;
+		node.textContent = "Kritérium úspešnosti " + num;
 	})
 }
 
